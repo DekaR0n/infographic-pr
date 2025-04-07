@@ -1,0 +1,1830 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic of Infographics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital@1&family=Oswald:wght@500&display=swap');
+        @import url('https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css');
+        :root {
+  --gap: -200px;
+  --circle-size: 200px;
+  --circle-size-small: 130px;
+  --color-1: #828f95;
+  --color-2: #9da6a5;
+  --color-3: #77ada7;
+  --color-4: #5aafb2;
+  --color-5: #39b3bb;
+  --color-6: #07bec2;
+
+  --background: #e9e5c7;
+  --mustard: #f9d22b;
+  --pale-green: #cce074;
+  --dark-green: #8bb53f;
+
+  --chart-col1: #ab832e;
+  --chart-col2: #c69a2e;
+  --chart-col3: #e1bb26;
+  --chart-col4: #f9d22b;
+
+  --chart-col5: #abdfed;
+  --chart-col6: #98d6e9;
+  --chart-col7: #77c5ec;
+  --chart-col8: #50aadc;
+
+  --base-color1: #f5f0d8;
+  --base-color2: #cdcbca;
+  --base-color3: #79c5ea;
+  --base-color4: #1d2326;
+  --base-color5: #aed14c;
+  --base-color6: #f9cf2e;
+  --base-color7: #fa9f1d;
+  --base-color8: #d73b2a;
+  --base-color9: #aa6fac;
+}
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--background);
+            
+        }
+
+        .container {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            justify-self: center;
+            align-self: center;
+        }
+
+
+
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .header-title {
+            position: relative;
+            display: inline-block;
+        }
+
+        .header-title svg {
+            display: block;
+        }
+
+        .header-title text {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 50px; /* Размер текста */
+            font-weight: 700;
+            text-transform: uppercase;
+            fill: #000000; /* Чёрный текст */
+        }
+
+        .header-subtitle {
+            font-size: 2em; /* Размер подзаголовка */
+            color: #757575; /* Серый цвет текста */
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .header-title text {
+                font-size: 30px;
+            }
+
+            .header-subtitle {
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-title text {
+                font-size: 20px;
+            }
+
+            .header-subtitle {
+                font-size: 0.8em;
+            }
+        }
+
+
+
+
+        .step1 {
+  z-index: 999;
+}
+
+.step2 .animated {
+  -webkit-animation-delay: 1s; 
+  animation-delay: 1s;
+  position: relative;
+  top: -6px;
+}
+
+.step3 .animated {
+  -webkit-animation-delay: 2s; 
+  animation-delay: 2s;
+  z-index: -3;
+  position:relative;
+  top: -12px;
+}
+
+.step4 .animated {
+  -webkit-animation-delay: 3s; 
+  animation-delay: 3s;
+  z-index: -5;
+  position: relative;
+  top: -18px;
+}
+
+.shape {
+	width: 150px;
+	height: 120px;
+  -webkit-box-shadow: 0px 12px 30px -6px rgba(41,41,41,0.25);
+  -moz-box-shadow: 0px 12px 30px -6px rgba(41,41,41,0.25);
+  box-shadow: 0px 12px 30px -6px rgba(41,41,41,0.25);
+  top: 10px;
+  left: 8px;
+  text-align: center;
+}
+
+.shape-1 .shape{
+  background: #e74c3c;
+}
+
+.shape-1 .material-icons {
+  color: #e74c3c;
+}
+
+.shape-2 .shape{
+  background: #34495e;
+}
+
+.shape-2 .material-icons { 
+  color: #34495e;
+}
+
+.shape-3 .shape {
+  background: #f39c12;
+}
+
+.shape-3 .material-icons { 
+  color: #f39c12;
+}
+
+.shape-4 .shape {
+  background: #3498db;
+}
+
+.shape-4 .material-icons { 
+  color: #3498db;
+}
+
+
+h1 {
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding-top: 8px;
+  transform:scale(2,3); 
+  -webkit-transform:scale(2,3); 
+  -moz-transform:scale(2,3); 
+  -ms-transform:scale(2,3); 
+  -o-transform:scale(2,3); 
+}
+
+.box p {
+  font-weight: 300;
+  padding-top: 25px;
+}
+
+
+
+
+        .font{
+            justify-items: center;
+        }
+        .chart-block {
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+}
+.chart circle:hover{
+  animation: reduce_radius 1s, popup 1s;
+}
+@keyframes reduce_radius {
+    from { r: 10; }
+    to { r: 3; }
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.chart-container {
+    position: relative;
+    margin: 1vh;
+    justify-items: center;
+    align-items: center;
+}
+
+.pie-chart {
+    width: 25vh;
+    height: 100%;
+}
+.pie-chart circle{
+    fill: none;
+  stroke: gold;
+  stroke-width: 32;
+  animation: rotate 1.5s ease-in;
+}
+
+.segment-1 {
+    fill: #c1e1c1; /* Light green for 85% */
+}
+
+.segment-2 {
+    fill: #a9d6a9; /* Slightly darker green for 15% */
+}
+
+.chart-text {
+    font-size: 2em;
+    font-weight: bold;
+    fill: #000;
+}
+
+.legend {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 1.4vh;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+.color-box {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.serif {
+    background-color: #c1e1c1; /* Match the 85% segment */
+}
+
+.sans-serif {
+    background-color: #a9d6a9; /* Match the 15% segment */
+}
+
+.condensed {
+    background-color: #a9d6a9; /* Match the 15% segment with pattern */
+    background-image: linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000),
+                     linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000);
+    background-size: 10px 10px;
+    background-position: 0 0, 5px 5px;
+}
+
+
+        .design{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            /* Два ряда */
+            grid-template-rows: auto auto;
+            /* Автоматическое размещение в ряд */
+            grid-auto-flow: row;
+            margin: auto;
+        }
+        .content{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            /* Два ряда */
+            grid-template-rows: auto auto;
+            /* Автоматическое размещение в ряд */
+            grid-auto-flow: row;
+            margin: 2vw;
+           
+        }
+        .chart-style{
+            grid-column:span 2 ;
+        }
+        .chart-style p{
+          margin: 2vh 0;
+        }
+        .countries{
+            grid-column: span 2;
+            grid-row:span 2;
+        }
+        .statistic{
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+        .header h1 {
+            background-color: #FFC107;
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 2.5em;
+            font-family: 'Roboto Condensed', sans-serif;
+            text-transform: uppercase;
+        }
+
+        .header p {
+            font-size: 1em;
+            color: #757575;
+        }
+
+        .section {
+            padding: 20px;
+        }
+
+        .section h2 {
+            font-family: 'Roboto Condensed', sans-serif;
+            text-transform: uppercase;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .nav-iconography-svg{
+          height: auto;
+          width: 20vh;
+          align-content: end;
+          justify-content: center;
+        }
+        .chart-style, .font, .countries, .theme, .key-info, .base-color, .nav-iconography, .sections, .credited-sources, .title {
+            border: 1px dashed #B0BEC5;
+            border-radius: 5px;
+        }
+
+        .sections{
+          justify-items: center;
+        }
+        .sections p{
+          margin: 1vh;
+        }
+
+        .key-info{
+          justify-items: center;
+        }
+        .key-info p{
+          margin: 2vh 0;
+        }
+        
+
+        /* SVG Styles */
+        .svg-container {
+            width: 20vh;
+            height: 20vh;
+            align-content: end;
+            justify-content: center;
+        }
+
+        /* Chart Style Section */
+        .chart-style .chart {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+            max-width: 1170px;
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 0;
+        }
+
+        /* Font Section */
+        .font .pie-chart {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Countries Section */
+        .countries .bar {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        .countries p{
+          font-size: 2.5vh;
+        }
+
+       
+        /* Theme Section */
+        .theme {
+            font-size: 0.8em;
+            text-transform: uppercase;
+        }
+
+        .theme .word-cloud span {
+            display: inline-block;
+            margin: 5px;
+        }
+        .word-cloud{
+            display: grid;
+        }
+        .pie circle {
+            fill: none;
+            stroke-width: 40;
+            animation: rotate 1.5s ease-in;
+        }
+        .pie-color circle{
+            fill: none;
+            stroke: gold;
+            stroke-width: 32;
+            animation: rotate 1.5s ease-in;
+            width: 20vh;
+        }
+        .pie-color-chart{
+            width: 40vh;
+            height: 40vh;
+            justify-self: center;
+            justify-content: center;
+            
+            
+        }
+        .key-info-svg{
+            justify-content: center;
+        }
+
+
+
+
+
+
+
+
+
+
+
+ .step-list {
+	 margin: 0;
+	 padding: 0;
+	 list-style-type: none;
+}
+ .step-list__item {
+	 counter-increment: step-counter;
+	 position: relative;
+}
+ .step-list__item:before {
+	 content: counter(step-counter);
+	 font-weight: 300;
+	 color: #d8d8d8;
+}
+ .step-list__item h2 {
+	 font-size: 24px;
+	 line-height: 30px;
+	 font-weight: 300;
+}
+ .step-list__item .icon {
+	 border-radius: 50%;
+	 display: block;
+	 flex: 0 0 auto;
+}
+ .step-list__item .icon img {
+	 width: 100%;
+	 height: 100%;
+}
+ .step-list__item .body {
+	 font-size: 12px;
+	 line-height: 18px;
+	 font-weight: 300;
+}
+ .step-list__item .content {
+	 display: flex;
+	 flex-direction: row;
+	 padding-bottom: 18px;
+}
+ .step-list__item:first-child .icon {
+	 background: #f4f6d5;
+}
+ .step-list__item:nth-child(2) .icon {
+	 background: #e8f4f3;
+}
+ .step-list__item:nth-child(3) .icon {
+	 background: #ededed;
+}
+ .step-list__item:nth-child(4) .icon {
+	 background: #edf6ef;
+}
+ .step-list__item:nth-child(5) .icon {
+	 background: #fef3f3;
+}
+ .step-list__item:nth-child(odd) .content {
+	 justify-content: flex-start;
+}
+ .step-list__item:nth-child(even) .content {
+	 justify-content: flex-end;
+}
+ .step-list__item:first-child > .step-list__item__inner:before {
+	 content: none;
+}
+ .step-list__item:last-child > .step-list__item__inner:after {
+	 content: none;
+}
+ .step-list__item + li {
+	 margin-top: 84px;
+}
+ .step-list__item + li > div {
+	 margin-top: -1px;
+}
+ @media screen and (max-width: 600px) {
+	 .step-list__item {
+		 display: flex;
+	}
+	 .step-list__item:before {
+		 content: counter(step-counter);
+		 position: relative;
+		 font-size: 36px;
+		 line-height: 42px;
+		 font-weight: 300;
+		 color: #000;
+		 margin-right: 12px;
+	}
+	 .step-list__item .icon {
+		 order: 0;
+		 width: 36px;
+		 height: 36px;
+		 padding: 9px;
+		 position: absolute;
+		 left: -9px;
+		 top: 42px;
+	}
+	 .step-list__item .body {
+		 order: 1;
+		 margin-top: 8px;
+		 margin-left: 12px;
+	}
+	 .step-list__item .content {
+		 align-items: flex-start;
+	}
+	 .step-list__item .content:before {
+		 content: '';
+		 position: absolute;
+		 border-left: #d8d8d8;
+		 height: 100%;
+		 left: 9px;
+		 bottom: 0;
+		 display: block;
+		 width: 1px;
+		 background: #d8d8d8;
+		 top: 84px;
+	}
+	 .step-list__item:last-child .content:before {
+		 content: none;
+	}
+}
+ @media screen and (min-width: 601px) {
+	 .step-list__item:before {
+		 content: counter(step-counter);
+		 position: absolute;
+		 font-size: 90px;
+		 line-height: 1;
+		 font-weight: 300;
+		 color: #d8d8d8;
+	}
+	 .step-list__item .icon {
+		 width: 174px;
+		 height: 174px;
+		 padding: 48px;
+	}
+	 .step-list__item .body {
+		 flex: 0 1 33.3333%;
+		 margin-top: 84px;
+	}
+	 .step-list__item .content {
+		 align-items: flex-end;
+	}
+	 .step-list__item > .step-list__item__inner {
+		 position: relative;
+	}
+	 .step-list__item > .step-list__item__inner:before, .step-list__item > .step-list__item__inner:after {
+		 border-width: 0px;
+		 border-style: solid;
+		 border-color: #d8d8d8;
+		 display: block;
+		 content: '';
+		 position: absolute;
+		 height: 42px;
+		 width: calc(33.3333% - 42px);
+	}
+	 .step-list__item:nth-child(odd) > .step-list__item__inner {
+		 text-align: right;
+	}
+	 .step-list__item:nth-child(odd) > .step-list__item__inner:before, .step-list__item:nth-child(odd) > .step-list__item__inner:after {
+		 border-left-width: 1px;
+		 left: calc(33.3333% - 21px);
+	}
+	 .step-list__item:nth-child(odd) > .step-list__item__inner:before {
+		 border-top-width: 1px;
+		 border-top-left-radius: 42px;
+		 margin-top: -42px;
+	}
+	 .step-list__item:nth-child(odd) > .step-list__item__inner:after {
+		 border-bottom-width: 1px;
+		 border-bottom-left-radius: 42px;
+		 margin-bottom: -42px;
+	}
+	 .step-list__item:nth-child(odd):before {
+		 left: 0;
+		 margin-left: 33.3333%;
+		 transform: translateX(-100%);
+	}
+	 .step-list__item:nth-child(odd) .icon {
+		 margin-left: 72px;
+	}
+	 .step-list__item:nth-child(even) > .step-list__item__inner:before, .step-list__item:nth-child(even) > .step-list__item__inner:after {
+		 border-right-width: 1px;
+		 right: calc(33.3333% - 21px);
+	}
+	 .step-list__item:nth-child(even) > .step-list__item__inner:before {
+		 border-top-width: 1px;
+		 border-top-right-radius: 42px;
+		 margin-top: -42px;
+	}
+	 .step-list__item:nth-child(even) > .step-list__item__inner:after {
+		 border-bottom-width: 1px;
+		 border-bottom-right-radius: 42px;
+		 margin-bottom: -42px;
+	}
+	 .step-list__item:nth-child(even):before {
+		 right: 0;
+		 margin-right: 33.3333%;
+		 transform: translateX(100%);
+	}
+	 .step-list__item:nth-child(even) .icon {
+		 margin-right: 72px;
+	}
+	 .step-list__item:nth-child(even) .body {
+		 order: 1;
+	}
+}
+@media screen and (max-width: 1670px) {
+    .chart{
+        flex-wrap: wrap;
+    }
+    .container{
+        margin: 0 auto;
+    }
+    .design{
+        grid-template-columns: auto auto;
+        flex-wrap: wrap;
+        justify-self: left;
+        width: 93vw;
+        margin: 0;
+    }
+    .chart-style{
+      grid-column: span 1;
+    }
+    .svg-header{
+      width: 80vw;
+    }
+
+    .content{
+      grid-template-columns: auto;
+    }
+    .countries{
+      grid-column: span 1;
+      width: 88vw;
+    }
+    .theme{
+      width: 88vw;
+    }
+    .sections{
+      width: 88vw;
+    }
+    .credited-sources{
+      width: 88vw;
+    }
+    .title{
+      width: 88vw;
+      display:none;
+    }
+
+    .credited-sources{
+      align-items: center;
+      
+    }
+    
+}
+@media screen and (max-width: 860px){
+  .design{
+    grid-template-columns: auto;
+  }
+}
+@media screen and (max-width: 770px){
+  .title{
+    display: none;
+  }
+}
+@media screen and (max-width: 1492px){
+  .graphic-container{
+    display: none;
+  }
+}
+@media screen and (max-width: 600px){
+  .design{
+    width: 80vw;
+  }
+  .chart-style{
+    max-width: 80vw;
+  }
+  .font{
+    max-width: 80vw;
+  }
+  .key-info{
+    max-width: 80vw;
+  }
+  .base-color{
+    max-width: 80vw;
+  }
+  .pie-color-chart{
+    width: 20vh;
+    height: 20vh;
+  }
+}
+@media screen and (max-width: 805px){
+  .svg-title{
+    width: 90vh;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.graphic-container {
+  width: 100%;
+  min-height: 100vh;
+
+  place-items: center;
+  margin: 100px 0;
+}
+.center-circles-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 20vh;
+  height: 100%;
+  width: 100%;
+}
+
+.single {
+  gap: 30vh;
+}
+.double {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.double:nth-child(even) {
+  flex-direction: column-reverse;
+}
+.circle {
+  width: var(--circle-size);
+  height: var(--circle-size);
+  background: #fff;
+  border-radius: 50%;
+  
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.icon i {
+  font-size: 3rem;
+}
+.content-container {
+  position: absolute;
+  max-width: 200px;
+  min-width: 200px;
+  width: 100%;
+}
+
+.content-container h2 {
+  position: relative;
+  padding: 0 10px;
+}
+/* arrow heading border */
+.one .content-container h2::before, 
+.one .content-container h2::after,
+.two .content-container h2::before, 
+.two .content-container h2::after, 
+.five .content-container h2::before, 
+.five .content-container h2::after {
+  position: absolute;
+  content: '';
+  width: 2px;
+  height: 22px;
+  background: teal;
+  left: -6px;
+}
+.one .content-container h2::before, 
+.two .content-container h2::before, 
+.five .content-container h2::before {
+  top: -2px;
+  transform: rotate(30deg);
+}
+.one .content-container h2::after,
+.two .content-container h2::after, 
+.five .content-container h2::after {
+  bottom: -2px;
+  transform: rotate(-30deg);
+}
+.three .content-container h2::before, 
+.three .content-container h2::after,
+.four .content-container h2::before, 
+.four .content-container h2::after, 
+.six .content-container h2::before, 
+.six .content-container h2::after {
+  position: absolute;
+  content: '';
+  width: 2px;
+  height: 22px;
+  background: teal;
+  right: -6px;
+}
+.three .content-container h2::before, 
+.four .content-container h2::before, 
+.six .content-container h2::before {
+  top: -2px;
+  transform: rotate(-30deg);
+}
+.three .content-container h2::after,
+.four .content-container h2::after, 
+.six .content-container h2::after {
+  bottom: -2px;
+  transform: rotate(30deg);
+}
+
+/* different content elements */
+.two, .four {
+  width: var(--circle-size-small);
+  height: var(--circle-size-small);
+}
+.two i, .four i {
+  color: #fff;
+  font-size: 2.5rem;
+}
+.one .content-container {
+  left: 0;
+  bottom: var(--gap);
+  text-align: left;
+}
+.two .content-container {
+  left: 80px;
+  bottom: var(--gap);
+  text-align: left;
+}
+.three .content-container {
+  right: 200px;
+  top: var(--gap);
+  text-align: right;
+}
+.four .content-container {
+  right: 20px;
+  top: var(--gap);
+  text-align: right;
+}
+.five .content-container {
+  left: 200px;
+  bottom: var(--gap);
+  text-align: left;
+}
+.six .content-container {
+  left: 0;
+  top: var(--gap);
+  text-align: right;
+}
+
+/* lines */
+/* bottom layer */
+.one .line {
+  position: absolute;
+  width: 2px;
+  height: 170px;
+  background-color: var(--color-1);
+  top: -150px;
+  left: -30px;
+}
+.one .line::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 35px;
+  height: 2px;
+  background: var(--color-1);
+}
+.one .line::after, 
+.two .line::after,
+.five .line::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 20px;
+  height: 2px;
+}
+.one .line::after {
+  background: var(--color-1);  
+}
+.two .line::after {
+  background: var(--color-2);
+}
+.five .line::after {
+  background: var(--color-5);
+}
+.two .line {
+  position: absolute;
+  width: 2px;
+  height: 90px;
+  background-color: var(--color-2);
+  top: -70px;
+  left: -30px;
+}
+.five .line {
+  position: absolute;
+  width: 2px;
+  height: 110px;
+  background-color: var(--color-5);
+  top: -90px;
+  left: -30px;
+}
+/* top layer */
+.three .line {
+  position: absolute;
+  width: 2px;
+  height: 222px;
+  background-color: var(--color-3);
+  bottom: -100px;
+  right: -30px;
+}
+.three .line::after, 
+.four .line::after, 
+.six .line::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 20px;
+  height: 2px;
+}
+.three .line::after {
+  background: var(--color-3);  
+}
+.four .line::after {
+  background: var(--color-4);  
+}
+.six .line::after {
+  background: var(--color-6);  
+}
+.four .line {
+  position: absolute;
+  width: 2px;
+  height: 222px;
+  background-color: var(--color-4);
+  bottom: -100px;
+  right: -30px;
+}
+.four .line::before {
+  content: '';
+  position: absolute;
+  right: 0px;
+  bottom: 0;
+  width: 20px;
+  height: 2px;
+  background: var(--color-4);
+}
+.six .line {
+  position: absolute;
+  width: 2px;
+  height: 282px;
+  background-color: var(--color-6);
+  bottom: -160px;
+  right: -30px;
+}
+.six .line::before {
+  content: '';
+  position: absolute;
+  right: 0px;
+  bottom: 0;
+  width: 35px;
+  height: 2px;
+  background: var(--color-6);
+}
+
+/* dots */
+.one .dot {
+  position: absolute;
+  top: 110px;
+  right: -30px;
+  width: 20px;
+  height: 20px;
+  background: var(--color-1);
+  border-radius: 50%;
+  box-shadow: -20px -110px 0 6px var(--color-1), -30px 80px 0 4px var(--color-1);
+}
+.four .dot {
+  position: absolute;
+  top: 130px;
+  left: 0px;
+  width: 20px;
+  height: 20px;
+  background: var(--color-4);
+  border-radius: 50%;
+  box-shadow: -22px -138px 0 10px var(--color-4), -70px 70px 0 0px var(--color-4);
+}
+.six .dot {
+  position: absolute;
+  top: -30px;
+  left: 10px;
+  width: 10px;
+  height: 10px;
+  background: var(--color-6);
+  border-radius: 50%;
+  box-shadow: -50px 50px 0 25px var(--color-6), 150px 250px 0 10px var(--color-6);
+}
+/* circle colors */
+.one {
+  box-shadow: inset 0 0 0 20px var(--color-1), inset 0px 0px 12px 20px #989898;
+}
+.two {
+  background-color: var(--color-2);
+  transform: translateX(-20px);
+}
+.three {
+  box-shadow: inset 0 0 0 20px var(--color-3), inset 0px 0px 12px 20px #989898;
+  transform: translateX(10px);
+}
+.four {
+  background-color: var(--color-4);
+  transform: translateX(-20px);
+}
+.five {
+  box-shadow: inset 0 0 0 20px var(--color-5), inset 0px 0px 12px 20px #989898;
+  transform: translateX(10px);
+}
+.six {
+  box-shadow: inset 0 0 0 20px var(--color-6), inset 0px 0px 12px 20px #989898;
+}
+
+
+/* h2 border colors */
+.one .content-container h2 {
+  border-top: 2px solid var(--color-1);
+  border-bottom: 2px solid var(--color-1);
+}
+.two .content-container h2 {
+  border-top: 2px solid var(--color-2);
+  border-bottom: 2px solid var(--color-2);
+}
+.three .content-container h2 {
+  border-top: 2px solid var(--color-3);
+  border-bottom: 2px solid var(--color-3);
+}
+.four .content-container h2 {
+  border-top: 2px solid var(--color-4);
+  border-bottom: 2px solid var(--color-4);
+}
+.five .content-container h2 {
+  border-top: 2px solid var(--color-5);
+  border-bottom: 2px solid var(--color-5);
+}
+.six .content-container h2 {
+  border-top: 2px solid var(--color-6);
+  border-bottom: 2px solid var(--color-6);
+}
+
+.one .content-container h2::before, 
+.one .content-container h2::after {
+  background: var(--color-1);
+  
+}
+.two .content-container h2::before, 
+.two .content-container h2::after {
+  background: var(--color-2);
+  
+} 
+.five .content-container h2::before, 
+.five .content-container h2::after {
+  background: var(--color-5);
+}
+
+.three .content-container h2::before,
+.three .content-container h2::after {
+  background: var(--color-3);
+  
+}
+.four .content-container h2::before, 
+.four .content-container h2::after {
+  background: var(--color-4);
+} 
+.six .content-container h2::before, 
+.six .content-container h2::after {
+ background: var(--color-6);
+}
+
+/* media */
+@media (max-width: 992px) {
+  .graphic-container {
+    margin: 50px 0;
+  }
+  .center-circles-container {
+    overflow: hidden;
+    overflow-x: scroll;
+    width: 1300px;
+  }
+  .double {
+    flex-direction: row;
+  }
+  .double:nth-child(even) {
+    flex-direction: row;
+  }
+  .two {
+    transform: translateX(0px);
+  }
+  .three {
+    transform: translateX(0px);
+  }
+  .four {
+    transform: translateX(0px);
+  }
+  .five {
+    transform: translateX(0px);
+  }
+}
+
+
+.bottom-charts-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.bottom-texts {
+    display: flex;
+    justify-content: center;
+    gap: 7.3vh;
+    margin-bottom: 20px;
+}
+
+.text-block {
+    background-color: var(--mustard);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100px;
+    text-align: center;
+    position: relative;
+}
+
+.text-block::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 20px;
+    background-color:var(--mustard);
+}
+
+.text-block::before {
+    content: '▼';
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--mustard);
+    font-size: 16px;
+}
+
+.bottom-charts {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.horizontal-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background-color: var(--dark-blue);
+    z-index: 0;
+}
+
+.extra-chart {
+    display: flex;
+    justify-content: center;
+}
+
+.diagram-wrapper {
+    position: relative;
+}
+
+.circle-diagram {
+    transform: rotate(-90deg);
+}
+
+.circle-diagram .base-ring {
+    fill: none;
+    stroke: #e0e0e0;
+    stroke-width: 20;
+}
+
+.circle-diagram .fill-ring {
+    fill: none;
+    stroke-width: 20;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.5s ease;
+}
+
+.circle-diagram .value-label {
+    transform: rotate(90deg);
+    transform-origin: center;
+    font-size: 20px;
+    fill: #333;
+}
+
+.circle-diagram .icon-label {
+    transform: rotate(90deg);
+    transform-origin: center;
+    font-size: 30px;
+    fill: #333;
+}
+
+.circle-diagram.large-diagram .base-ring,
+.circle-diagram.large-diagram .fill-ring {
+    stroke-width: 30;
+}
+
+.info-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--mustard);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    width: 200px;
+    text-align: center;
+}
+
+.diagram-wrapper:hover .info-box {
+    opacity: 1;
+}
+.apple-svg{
+  max-width: 20vw;
+}
+.key-svg-grid{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vw
+}
+ 
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-title">
+            <svg width="1200" height="150" viewBox="0 0 600 150" class="svg-header">
+                <!-- Основная часть ленты -->
+                <path d="M-100 0 H700 L700 110 L-100 110 Z" fill="#FFC107" />
+                <!-- Левый завёрнутый край -->
+                <path d="M-100 55 H-200 L-150 100 L-200 145 H-100 Z" fill="#E0A800" style="fill:#E0A800;stroke:#E0A800;stroke-width:3" />
+                
+                <!-- Правый завёрнутый край -->
+                <path d="M700 55 H800 L750 100 L800 145 H700 Z" fill="#E0A800" />
+                <!-- Текст -->
+                <text x="300" y="75" text-anchor="middle" dominant-baseline="middle">
+                    Infographic of Infographics
+                </text>
+            </svg>
+        </div>
+        <p class="header-subtitle">
+            Data visualization is a popular new way of sharing research. Here is a look at some of the visual devices, informational elements, and general trends found in the modern day infographic.
+        </p>
+    </div>
+    <div class="container">
+
+        <div class="design">
+            <!-- Design Section -->
+            <div class="section chart-style">
+                <h2>Design</h2>
+                <h3>Chart Style</h3>
+                <p>Percentage of infographics with the following charts:</p>
+                <div class="chart">
+                    <div>
+                        <div class="svg-container">
+                            <svg viewBox="0 0 100 100" class="pie">
+                                <circle r="10%" cx="50" cy="65"  stroke="var(--pale-green)" stroke-dasharray="75 100" />
+                                <circle r="20" cx="50" cy="65"  stroke="var(--dark-green)" stroke-dasharray="20 100" stroke-dashoffset="-75" />
+                                <circle r="20" cx="50" cy="65"  stroke="green" stroke-dasharray="5 100" stroke-dashoffset="-95" />
+                                <path d="M30 18 H65 V5 H30 L35 12 " fill="#fff"></path>
+                                <text x="50" y="15" text-anchor="middle" font-size="10">22%</text>
+                            </svg>
+                        </div>
+                        <p>Pie Chart</p>
+                    </div>
+                    <div>
+                        
+                        <div class="svg-container">
+                            <svg viewBox="0 0 100 90" style="overflow: visible;">
+                                <path d="M30 20 H80 L30 40 H80 L30 60 H80 L30 80 H80" fill="#872d25"/>
+                                <path d="M35 8 H70 V-5 H35 L40 2 " fill="#fff"></path>
+                                <text x="55" y="5" text-anchor="middle" font-size="10">24%</text>
+                            </svg>
+                        </div>
+                        <p>Pictorial Chart</p>
+                    </div>
+                    <div>
+                        <div class="svg-container">
+                            <svg viewBox="0 0 100 90" style="overflow: visible;">
+                                <path d="M30 20 H80 V80 H30" fill="var(--chart-col1)"></path>
+                                <path d="M30 30 L40 40 L50 30 H80 V80 H30" fill="var(--chart-col2)"></path>
+                                <path d="M30 50 L60 60 L75 50H80 V80 H30" fill="var(--chart-col3)"></path>
+                                <path d="M30 75 L45 70 L55 75 L65 67 L70 75 H80 V80 H30" fill="var(--chart-col4)"></path>
+                                <path d="M35 8 H70 V-5 H35 L40 2 " fill="#fff"></path>
+                                <text x="55" y="5" text-anchor="middle" font-size="10">24%</text>
+                            </svg>
+                        </div>
+                        <p>Line Chart</p>
+                    </div>
+                    <div>
+                        <div class="svg-container">
+                            <svg viewBox="0 0 100 110" style="overflow: visible;">
+                                <rect x="20" y="20" width="15" height="65" fill="var(--chart-col5)" />
+                                <rect x="40" y="15" width="15" height="70" fill="var(--chart-col6)" />
+                                <rect x="60" y="5" width="15" height="80" fill="var(--chart-col7)" />
+                                <path d="M30 -7 H65 V-20 H30 L35 -13 " fill="#fff"></path>
+                                <text x="50" y="-10" text-anchor="middle" font-size="10">30%</text>
+                            </svg>
+                        </div>
+                        <p>Bar Chart</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Font Section -->
+            <div class="section font">
+                <div class="chart-block">
+                    <h2>FONT</h2>
+                    <div class="legend">
+                        <div class="legend-item"><span class="color-box serif"></span> Serif</div>
+                        <div class="legend-item"><span class="color-box sans-serif"></span> Sans Serif</div>
+                        <div class="legend-item"><span class="color-box condensed"></span> Condensed Sans Serif</div>
+                    </div>
+                    <div class="chart-container">
+                        <svg class="pie-chart" viewBox="0 0 64 64">
+                            <!-- Pie chart segments -->
+                            <defs>
+                                <pattern id="circles-1" patternUnits="userSpaceOnUse" width="10" height="10">
+                                  <image xlink:href="pattern-sans.svg"
+                                     x="0" y="0" width="10" height="10">
+                                  </image>
+                                </pattern>
+                              </defs>
+
+                            <circle r="25%" cx="50%" cy="50%" style="stroke-dasharray: 45 100; stroke: #AE9;">
+                            </circle>
+                            <circle r="25%" cx="50%" cy="50%" style="stroke-dasharray: 41 100; stroke: url('#circles-1') ; stroke-dashoffset: -45; animation-delay: 0.25s">
+                            </circle>
+                            <circle r="25%" cx="50%" cy="50%" style="stroke-dasharray: 16 100; stroke: #ddffaa; stroke-dashoffset: -86; animation-delay: 0.5s">
+                            </circle>
+                            
+                            <!-- Centered text inside the chart -->
+                            <text x="30%" y="55%" text-anchor="middle" dominant-baseline="middle" font-size="15px">85%</text>
+                            <text x="80%" y="42%" text-anchor="middle" dominant-baseline="middle" font-size="8px">15%</text>
+                        </svg>
+                    </div>
+                    
+                </div>
+            </div>
+    
+            <!-- Key Info Section -->
+            <div class="section key-info">
+                <h3>Key Info</h3>
+                <p>Percentage of infographics with key:</p>
+                <div class="svg-container key-info-svg">
+                    <svg viewBox="0 0 64 64">
+                        <circle r="25%" cx="50%" cy="50%" style="stroke-dasharray: 67 100; stroke: #AE9; fill:none;" stroke-width="32">
+                        </circle>
+                        <circle r="25%" cx="50%" cy="50%" style="stroke-dasharray: 33 100; stroke: rgb(47, 66, 42); stroke-dashoffset: -67; fill:none;"  >
+                        </circle>
+                        <text x="24" y="46" text-anchor="middle" font-size="10">67%</text>
+                    </svg>
+                </div>
+                <p>Average number of symbols per key: 5.1</p>
+                <svg width="300" height="50" class="key-svg-grid">
+                    <path d="M0 50 L30 0 L60 50" fill="#EF5350"></path>
+                    <rect x="70" y="0" width="50" height="50" fill="#AED581" />
+                    <path d="M130 25 L150 0 L170 25 L150 50" fill="#42A5F5"></path>
+                    <circle r="25" cx="205" cy="25" style=" stroke: #f9d028; fill:#f9d028;" stroke-width="1">
+                    </circle>
+                </svg>
+            </div>
+    
+            <!-- Base Color Section -->
+            <div class="section base-color">
+                <h3>Base Color</h3>
+                <div class="svg-container pie-color-chart">
+                    <svg viewBox="0 0 64 64" class="pie-color">
+                        <circle r="25%" cx="50%" cy="50%" style="stroke-dasharray: 29 100; stroke: var(--base-color1);"  >
+                        </circle>
+                        <circle r="25%" cx="50%" cy="50%" style="stroke-dasharray: 18 100; stroke: var(--base-color2); stroke-dashoffset: -29; animation-delay: 0.25s">
+                        </circle>
+                        <circle r="25%" cx="50%" cy="50%" style="stroke-dasharray: 18 100; stroke: var(--base-color3); stroke-dashoffset: -47; animation-delay: 0.5s">
+                        </circle>
+                        <circle r="25%" cx="50%" cy="50%" style="stroke-dasharray: 13 100; stroke: var(--base-color4); stroke-dashoffset: -65; animation-delay: 0.75s">
+                        </circle>
+                        <circle r="25%" cx="50%" cy="50%" style="stroke-dasharray: 10 100; stroke: var(--base-color5); stroke-dashoffset: -78; animation-delay: 1s">
+                        </circle>
+                        <circle r="25%" cx="50%" cy="50%" style="stroke-dasharray: 4 100; stroke: var(--base-color6); stroke-dashoffset: -88; animation-delay: 0.5s">
+                        </circle>
+                        <circle r="25%" cx="50%" cy="50%" style="stroke-dasharray: 2 100; stroke: var(--base-color7); stroke-dashoffset: -92; animation-delay: 0.75s">
+                        </circle>
+                        <circle r="25%" cx="50%" cy="50%" style="stroke-dasharray: 2 100; stroke: var(--base-color8); stroke-dashoffset: -94; animation-delay: 1s">
+                        </circle>
+                        <circle r="25%" cx="50%" cy="50%" style="stroke-dasharray: 2 100; stroke: var(--base-color9); stroke-dashoffset: -96; animation-delay: 0.75s">
+                        </circle>
+                        <circle r="25%" cx="50%" cy="50%" style="stroke-dasharray: 2 100; stroke: var(--base-color10); stroke-dashoffset: -98; animation-delay: 1s">
+                        </circle>
+
+                        <!-- Centered text inside the chart -->
+                        <text x="69%" y="70%" text-anchor="middle" dominant-baseline="middle" font-size="12px">29%</text>
+                        <text x="27%" y="69%" text-anchor="middle" dominant-baseline="middle" font-size="8px">18%</text>
+
+                        <text x="24%" y="42%" text-anchor="middle" dominant-baseline="middle" font-size="8px">18%</text>
+                        <text x="43%" y="20%" text-anchor="middle" dominant-baseline="middle" font-size="7px" fill="white">13%</text>
+
+                        <text x="67%" y="20%" text-anchor="middle" dominant-baseline="middle" font-size="6px">10%</text>
+
+                        <text x="80%" y="28%" text-anchor="middle" dominant-baseline="middle" font-size="5px">4%</text>
+                        <text x="87%" y="38%" text-anchor="middle" dominant-baseline="middle" font-size="4px">2%</text>
+                      </svg>
+                </div>
+            </div>
+    
+            <!-- Nav Iconography Section -->
+            <div class="section nav-iconography">
+                <h3>Navigational Iconography</h3>
+                <p>Frequency of iconography & lines in infographics:</p>
+                <div class="nav-iconography-svg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="300" height="100" viewBox="0 0 24 24" fill="none" style="overflow : visible;">
+                        <path d="M23.0681 11.9928L18.8183 7.75732L17.4065 9.17392L19.2419 11.0031L0.932836 11.0011L0.932617 13.0011L19.2373 13.0031L17.4158 14.8308L18.8324 16.2426L23.0681 11.9928Z" fill="#000000"/>
+                        <rect x="30" y="7" width="4" height="10" fill="#EF5350"></rect>
+                        <text x="38" y="12" text-anchor="middle" dominant-baseline="middle" font-size="8px" fill="black">13%</text>
+                      </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="300" height="100" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+
+                        <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+                        <path d="M2520 4084 c-86 -22 -209 -88 -272 -144 -117 -105 -213 -285 -268 -504 -55 -218 -74 -421 -90 -959 -14 -472 -41 -692 -111 -922 -40 -127 -69 -185 -127 -247 -58 -62 -109 -89 -182 -95 -163 -15 -289 109 -349 342 -39 153 -44 219 -46 665 -2 429 -9 545 -41 703 -73 366 -261 540 -538 500 -289 -41 -443 -284 -485 -760 -14 -156 -14 -339 0 -365 17 -32 74 -51 115 -38 56 19 61 39 67 290 6 231 16 310 56 424 58 164 175 266 306 266 75 0 128 -24 177 -78 51 -56 76 -109 104 -218 36 -143 44 -265 44 -668 0 -204 5 -425 10 -491 24 -293 86 -477 204 -603 106 -114 204 -155 371 -156 105 -1 114 1 175 31 88 43 140 89 198 178 110 163 190 452 222 799 6 65 15 292 20 505 10 412 19 532 51 706 47 256 119 425 230 535 88 88 159 124 257 129 66 3 79 0 137 -28 38 -19 80 -50 103 -76 91 -104 177 -323 218 -560 24 -132 28 -468 10 -754 -32 -508 -14 -789 64 -1021 103 -302 321 -470 562 -432 220 34 398 219 445 463 13 72 14 107 5 249 -18 255 1 337 94 418 80 71 218 106 388 100 l89 -3 -85 -72 c-94 -79 -108 -105 -83 -156 20 -42 62 -67 114 -67 33 0 50 8 98 47 125 101 331 284 337 299 11 28 6 69 -12 97 -26 42 -371 306 -409 313 -45 9 -103 -22 -127 -67 -27 -50 -11 -85 69 -147 l64 -49 -122 -6 c-281 -14 -455 -106 -546 -288 -53 -105 -65 -186 -58 -374 10 -266 -17 -381 -112 -475 -76 -75 -118 -95 -206 -95 -58 0 -79 5 -123 29 -29 16 -71 49 -93 73 -77 84 -143 255 -168 438 -15 108 -13 490 4 750 39 596 -4 938 -156 1235 -138 271 -363 396 -599 334z"/>
+                        </g>
+                        <rect x="640" y="135" width="500" height="220" fill="#EF5350"></rect>
+                        <text x="820" y="250" text-anchor="middle" dominant-baseline="middle" font-size="169px">33%</text>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" width="300" height="100" viewBox="0 0 32 32" version="1.1">
+                        <title>arrows-shuffle</title>
+                        <path d="M26.885 18.115c-0.226-0.226-0.539-0.366-0.884-0.366-0.691 0-1.251 0.56-1.251 1.251 0 0.345 0.14 0.658 0.366 0.884l1.865 1.865h-6.68l-1.695-2.459c-0.228-0.328-0.604-0.54-1.029-0.54-0.69 0-1.249 0.559-1.249 1.249 0 0.265 0.083 0.511 0.223 0.713l-0.003-0.004 2.067 3c0.229 0.328 0.604 0.541 1.029 0.541h7.336l-1.865 1.865c-0.226 0.226-0.366 0.539-0.366 0.884 0 0.691 0.56 1.251 1.251 1.251 0.345 0 0.658-0.14 0.884-0.366l4-4c0.225-0.227 0.365-0.54 0.365-0.885s-0.139-0.658-0.365-0.885l0 0zM2 10.249l7.343 0.001 1.694 2.459c0.228 0.329 0.604 0.541 1.029 0.541 0.69 0 1.25-0.56 1.25-1.25 0-0.265-0.082-0.511-0.223-0.713l0.003 0.004-2.066-3c-0.228-0.329-0.604-0.541-1.029-0.541-0 0-0 0-0 0l-8-0.001c-0.69 0-1.25 0.56-1.25 1.25s0.56 1.25 1.25 1.25v0zM26.981 10.25l-1.866 1.866c-0.226 0.226-0.366 0.539-0.366 0.884 0 0.691 0.56 1.251 1.251 1.251 0.346 0 0.658-0.14 0.885-0.367v0l4-4c0.025-0.025 0.034-0.059 0.057-0.086 0.183-0.19 0.296-0.449 0.296-0.735 0-0.001 0-0.003 0-0.004v0c0.001-0.021 0.012-0.038 0.012-0.059s-0.011-0.038-0.012-0.059c0-0.001 0-0.003 0-0.005 0-0.285-0.113-0.543-0.296-0.733l0 0c-0.023-0.027-0.032-0.062-0.058-0.088l-4-4c-0.226-0.227-0.539-0.367-0.885-0.367-0.691 0-1.251 0.56-1.251 1.251 0 0.345 0.14 0.658 0.366 0.884v0l1.866 1.866h-6.981c-0 0-0 0-0 0-0.418 0-0.788 0.205-1.015 0.52l-0.003 0.004-9.626 13.477h-7.356c-0.69 0-1.25 0.56-1.25 1.25s0.56 1.25 1.25 1.25v0h8c0.418-0 0.788-0.205 1.015-0.52l0.003-0.004 9.625-13.477z"/>
+                        <rect x="41" y="9" width="6" height="13" fill="#EF5350"></rect>
+                        <text x="51" y="16" text-anchor="middle" dominant-baseline="middle" font-size="10px">13%</text>
+                      </svg>
+                </div>
+            </div>
+
+            <div class="section title" style="grid-column: span 3;">
+              <div class="bottom-charts-wrapper">
+                <div class="bottom-texts">
+                    <div class="text-block">Antiquity</div>
+                    <div class="text-block">Middle Ages</div>
+                    <div class="text-block">19th Century</div>
+                    <div class="text-block">20th Century</div>
+                    <div class="text-block">Late 20th Century</div>
+                </div>
+                <div class="bottom-charts">
+                    <div class="diagram-wrapper">
+                        <svg class="circle-diagram" width="150" height="150">
+                            <circle class="base-ring" cx="75" cy="75" r="60"></circle>
+                            <circle class="fill-ring" cx="75" cy="75" r="60" data-percent="50" style="stroke: #ff6347;"></circle>
+                        </svg>
+                        <div class="info-box">
+                            <p>Infographics originated in ancient times when people used cave drawings and symbols to convey information.</p>
+                        </div>
+                    </div>
+                    <div class="diagram-wrapper">
+                        <svg class="circle-diagram" width="150" height="150">
+                            <circle class="base-ring" cx="75" cy="75" r="60"></circle>
+                            <circle class="fill-ring" cx="75" cy="75" r="60" data-percent="60" style="stroke: #ff6347;"></circle>
+                        </svg>
+                        <div class="info-box">
+                            <p>In the Middle Ages, maps and illustrations in manuscripts became the first examples of data visualization.</p>
+                        </div>
+                    </div>
+                    <div class="diagram-wrapper">
+                        <svg class="circle-diagram" width="150" height="150">
+                            <circle class="base-ring" cx="75" cy="75" r="60"></circle>
+                            <circle class="fill-ring" cx="75" cy="75" r="60" data-percent="70" style="stroke: #ff6347;"></circle>
+                        </svg>
+                        <div class="info-box">
+                            <p>In the 19th century, William Playfair invented line graphs, bar charts, and pie charts, laying the foundation for modern infographics</p>
+                        </div>
+                    </div>
+                    <div class="diagram-wrapper">
+                        <svg class="circle-diagram" width="150" height="150">
+                            <circle class="base-ring" cx="75" cy="75" r="60"></circle>
+                            <circle class="fill-ring" cx="75" cy="75" r="60" data-percent="80" style="stroke: #ff6347;"></circle>
+                        </svg>
+                        <div class="info-box">
+                            <p>In the 20th century, the development of printing and mass media made infographics a popular tool in journalism</p>
+                        </div>
+                    </div>
+                    <div class="diagram-wrapper">
+                        <svg class="circle-diagram" width="150" height="150">
+                            <circle class="base-ring" cx="75" cy="75" r="60"></circle>
+                            <circle class="fill-ring" cx="75" cy="75" r="60" data-percent="90" style="stroke: #ff6347;"></circle>
+                        </svg>
+                        <div class="info-box">
+                            <p>With the advent of computers in the late 20th century, digital technologies accelerated the creation of complex visualizations</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            </div>
+
+            
+            
+        </div>
+
+        <div class="content">
+            <!-- Countries Section -->
+        <div class="section countries">
+            <h3>Countries Featured</h3>
+            <div class="bar">
+                <svg width="700" height="80">
+                    <rect x="0" y="25" width="600" height="30" fill="#FFCA28" />
+                    <rect x="605" y="38" width="100" height="3" fill="#000"/>
+                    <text x="90" y="41" text-anchor="middle" dominant-baseline="middle" font-size="20px">United states</text>
+                </svg>
+                <p>88%</p>
+            </div>
+            <div class="bar">
+                <svg width="700" height="80">
+                    <rect x="0" y="25" width="176" height="30" fill="#FFCA28"/>
+                    <rect x="181" y="38" width="524" height="3" fill="#000"/>
+                    <text x="50" y="41" text-anchor="middle" dominant-baseline="middle" font-size="20px">China</text>
+                </svg>
+                <p>22%</p>
+            </div>
+            <div class="bar">
+                <svg width="700" height="80">
+                    <rect x="0" y="25" width="96" height="30" fill="#FFCA28"/>
+                    <rect x="181" y="38" width="524" height="3" fill="#000"/>
+                    <text x="101" y="41" text-anchor="middle" dominant-baseline="middle" font-size="20px">United Kingdom</text>
+                </svg>
+                <p>12%</p>
+            </div>
+            <div class="bar">
+                <svg width="700" height="80">
+                    <rect x="0" y="25" width="96" height="30" fill="#FFCA28"/>
+                    <rect x="101" y="38" width="604" height="3" fill="#000"/>
+                    <text x="60" y="41" text-anchor="middle" dominant-baseline="middle" font-size="20px">Australia</text>
+                </svg>
+                <p>12%</p>
+            </div>
+            <div class="bar">
+                <svg width="700" height="80">
+                    <rect x="0" y="25" width="88" height="30" fill="#FFCA28"/>
+                    <rect x="95" y="38" width="800" height="3" fill="#000"/>
+                    <text x="58" y="41" text-anchor="middle" dominant-baseline="middle" font-size="20px">Canada</text>
+                </svg>
+                <p>10%</p>
+            </div>
+            <div class="bar">
+                <svg width="700" height="80">
+                    <rect x="0" y="25" width="88" height="30" fill="#FFCA28"/>
+                    <rect x="93" y="38" width="800" height="3" fill="#000"/>
+                    <text x="47" y="41" text-anchor="middle" dominant-baseline="middle" font-size="20px">India</text>
+                </svg>
+                <p>10%</p>
+            </div>
+            <div class="bar">
+                <svg width="700" height="80">
+                    <rect x="0" y="25" width="88" height="30" fill="#FFCA28"/>
+                    <rect x="93" y="38" width="700" height="3" fill="#000"/>
+                    <text x="51" y="41" text-anchor="middle" dominant-baseline="middle" font-size="20px">France</text>
+                </svg>
+                <p>10%</p>
+            </div>
+            <div class="bar">
+                <svg width="700" height="80">
+                    <rect x="0" y="25" width="70" height="30" fill="#FFCA28"/>
+                    <rect x="90" y="38" width="700" height="3" fill="#000"/>
+                    <text x="54" y="41" text-anchor="middle" dominant-baseline="middle" font-size="20px">Mexico</text>
+                </svg>
+                <p>8%</p>
+            </div>
+            
+        </div>
+        
+
+        <!-- Theme Section -->
+        
+
+        
+
+        <!-- Sections Section -->
+        <div class="section sections">
+            <h3>Sections</h3>
+            <p></p>
+            <div class="svg-container">
+                <svg viewBox="0 0 500 500">
+                    <!-- Круг -->
+                    <circle cx="250" cy="250" r="150" fill="#e9e9e9" />
+                
+                    <!-- Текст внутри круга -->
+                    <text x="50%" y="50%" text-anchor="middle" alignment-baseline="middle" font-family="Arial" font-size="48" fill="black">2.12</text>
+                
+                    <!-- Кривая для текста по окружности -->
+                    <path id="textPath" d="M 250 250 m -150, 0 a 150,150 0 1,1 300,0 a 150,150 0 1,1 -300,0" fill="none" />
+                
+                    <!-- Текст, который обвит -->
+                    <text font-family="Arial" font-size="48" fill="black">
+                      <textPath xlink:href="#textPath">
+                        Average number of sections per infographic
+                      </textPath>
+                    </text>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Credited Sources Section -->
+        <div class="section credited-sources">
+            <h3>Credited Sources</h3>
+            <p>Average number of sources per infographic: 2.29</p>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" viewBox="0 0 500 500" xml:space="preserve" class="apple-svg">
+                <polygon style="fill:#663300;" points="271.675,0 256.001,0 245.551,28.72 256.001,57.442 271.675,57.442 "/>
+                <rect x="240.327" style="fill:#983300;" width="15.674" height="57.442"/>
+                <path style="fill:#FF0F4D;" d="M326.651,113.476L326.651,113.476c-7.507-18.124-1.929-38.403,12.383-50.337  c-12.175-11.057-27.747-17.696-44.724-17.696c-13.89,0-26.809,4.504-37.725,12.177c-0.193-0.136-0.391-0.262-0.585-0.396  l-20.899,86.099l20.899,94.739c0.198-0.132,0.386-0.252,0.585-0.388c10.98,7.438,17.615,9.257,28.404,9.257  c46.133,0,72.976-62.264,78.716-106.584C347.813,139.109,333.17,129.212,326.651,113.476z"/>
+                <path style="fill:#FF4F67;" d="M218.861,45.444c-38.971,0-70.565,34.97-70.565,78.11c0,43.141,27.517,123.379,79.886,123.379  c10.593,0,17.19-1.767,27.819-8.87V57.223C245.209,49.797,232.506,45.444,218.861,45.444z"/>
+                <polygon style="fill:#D5681E;" points="32.033,291.006 32.033,338.028 52.933,338.028 263.838,358.927 483.263,338.028   483.263,291.006 256.001,270.107 "/>
+                <rect x="32.033" y="243.984" style="fill:#FF9933;" width="451.228" height="47.023"/>
+                <g>
+                    <rect x="75.655" y="275.333" style="fill:#FDE09C;" width="34.828" height="31.348"/>
+                    <rect x="127.902" y="275.333" style="fill:#FDE09C;" width="34.828" height="31.348"/>
+                    <rect x="180.149" y="275.333" style="fill:#FDE09C;" width="34.828" height="31.348"/>
+                    <rect x="404.812" y="275.333" style="fill:#FDE09C;" width="34.828" height="31.348"/>
+                </g>
+                <polygon style="fill:#FF8E00;" points="28.737,462.723 7.838,512 472.814,512 472.814,478.397 462.365,462.723 252.645,441.824 "/>
+                <polygon style="fill:#FFBA00;" points="472.814,413.446 257.648,392.547 52.933,413.446 7.838,413.446 28.737,462.723   462.365,462.723 472.814,447.049 "/>
+                <rect x="32.477" y="447.048" style="fill:#FDE09C;" width="440.34" height="31.348"/>
+                <path style="fill:#D5681E;" d="M7.838,512c27.215,0,49.276-22.062,49.276-49.276c0-27.215-22.062-49.276-49.276-49.276V512z"/>
+                <polygon style="fill:#003DA8;" points="52.932,375.737 52.932,413.446 383.995,413.446 399.669,402.997 415.343,413.446   436.242,413.446 451.916,402.997 467.59,413.446 504.162,413.446 504.162,375.737 280.731,354.838 "/>
+                <polygon style="fill:#2F91ED;" points="504.162,338.028 467.589,338.028 451.916,348.478 436.242,338.028 415.343,338.028   399.668,348.478 383.995,338.028 52.932,338.028 52.932,375.737 504.162,375.737 "/>
+                <g>
+                    <rect x="436.244" y="338.029" style="fill:#B7DBFB;" width="31.348" height="75.414"/>
+                    <rect x="383.997" y="338.029" style="fill:#B7DBFB;" width="31.348" height="75.414"/>
+                </g>
+                </svg>
+        </div>
+
+        
+        </div>
+        <div class="graphic-container">
+  
+          <div class="center-circles-container">
+            
+        <!--  single    -->
+            <div class="single">
+              <div class="circle one">
+                <div class="dot"></div>
+                <div class="icon">
+                  <i class="far fa-building">1</i>
+                </div>
+                <div class="content-container">
+                  <div class="line"></div>
+                  <h2>Data Visualization</h2>
+                  <div class="content-bott">
+                    <p>Presenting complex data in charts, graphs, and diagrams for easy understanding</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        <!--   double   -->
+            <div class="double">
+              <div class="circle two">
+                <div class="icon">
+                  <i class="far fa-building">2</i>
+                </div>
+                <div class="content-container">
+                  <div class="line"></div>
+                  <h2>Storytelling</h2>
+                  <div class="content-bott">
+                    <p>Using visuals to narrate events, processes, or ideas effectively</p>
+                  </div>
+                </div>
+                </div>
+              <div class="circle three">
+                <div class="icon">
+                  <i class="far fa-building">3</i>
+                </div>
+                <div class="content-container">
+                  <div class="line"></div>
+                  <h2>Comparison</h2>
+                  <div class="content-bott">
+                    <p>Highlighting differences or similarities between datasets or concepts</p>
+                  </div>
+                </div>
+                </div>
+            </div>
+        <!--   double   -->
+            <div class="double">
+              <div class="circle four">
+                <div class="dot"></div>
+                <div class="icon">
+                  <i class="far fa-building">4</i>
+                </div>
+                <div class="content-container">
+                  <div class="line"></div>
+                  <h2>Trends</h2>
+                  <div class="content-bott">
+                    <p>Showing patterns or changes over time through visual timelines or graphs</p>
+                  </div>
+                </div>
+                </div>
+              <div class="circle five">
+                <div class="icon">
+                  <i class="far fa-building">5</i>
+                </div>
+                <div class="content-container">
+                  <div class="line"></div>
+                  <h2>Geography</h2>
+                  <div class="content-bott">
+                    <p>Mapping spatial data to illustrate locations, routes, or distributions</p>
+                  </div>
+                </div>
+                </div>
+            </div>
+        <!--  single    -->
+            <div class="single">
+              <div class="circle six">
+                <div class="dot"></div>
+                <div class="icon">
+                  <i class="far fa-building">6</i>
+                </div>
+                <div class="content-container">
+                  <div class="line"></div>
+                  <h2>Instruction</h2>
+                  <div class="content-bott">
+                    <p>Simplifying guides or procedures with step-by-step visuals</p>
+                  </div>
+                </div>
+                </div>
+            </div>
+            
+          </div>
+          
+        </div>
+
+      
+    </div>
+    
+    <script>
+        // Здесь можно добавить интерактивность, например, анимации для SVG
+    </script>
+</body>
+</html>

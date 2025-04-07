@@ -1,0 +1,73 @@
+body{
+    background-color: black;
+    margin: 0;
+}
+.wrapper{
+    margin: auto;
+}
+.hero-section{
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    max-height: 100vh;
+    height: 100vh;
+}
+.hero-left{
+    margin: auto 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.hero-right{
+    align-self: flex-end;
+}
+h1, h2{
+    font-size: 5rem;
+    color: aliceblue;
+    letter-spacing: -0.2rem;
+}
+p{
+    color: aliceblue;
+}
+span{
+    color: aliceblue;
+}
+
+
+.cube {
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+
+    top:  calc(50% - 300px / 2);
+    left: calc(30% - 300px / 2);
+    transform-style: preserve-3d;
+    transform: perspective(700px)  rotateX(-36deg) rotateY(-27deg);
+    transition: all 1s ease;
+    animation: rotation 30s ease-in-out infinite;
+    
+    
+}
+
+.cube > article {
+    height: 100%;
+    width: 100%;
+    
+    box-sizing: border-box;
+    position: absolute;
+    transform-style: preserve-3d;
+    
+    line-height: 150%;
+    letter-spacing: 0.05em;
+    
+}
+
+.back   {transform: rotateX(-180deg) translateZ(150px); backdrop-filter: blur(15px); opacity: 0.8; }
+.top    {transform: rotateX( 90deg)  translateZ(150px); backdrop-filter: blur(15px); opacity: 0.6;}
+.front  {transform:                  translateZ(150px); backdrop-filter: blur(15px); opacity: 0.5;}
+.bottom {transform: rotateX(-90deg)  translateZ(150px); backdrop-filter: blur(15px); opacity: 0.4;}
+.left   {transform: rotateY(-90deg)  translateZ(150px); backdrop-filter: blur(15px); opacity: 0.7;}
+.right  {transform: rotateY( 90deg)  translateZ(150px); backdrop-filter: blur(15px); opacity: 0.5;}
+
+@keyframes rotation {
+    50% {transform:perspective(700px) rotateX(360deg) rotateY(720deg);}
+}
