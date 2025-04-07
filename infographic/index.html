@@ -70,6 +70,9 @@
         .header-title {
             position: relative;
             display: inline-block;
+            animation-name: Appearance;
+            animation-duration: 0.4s;
+            animation-timing-function: cubic-bezier(.1,-.6,.2,0);
         }
 
         .header-title svg {
@@ -90,6 +93,10 @@
             max-width: 800px;
             margin: 0 auto;
             line-height: 1.5;
+
+            animation-name: Appearance;
+            animation-duration: 0.8s;
+            animation-timing-function: cubic-bezier(.1,-.6,.2,0);
         }
 
         @media (max-width: 768px) {
@@ -214,13 +221,7 @@ h1 {
     padding: 20px;
     border-radius: 5px;
 }
-.chart circle:hover{
-  animation: reduce_radius 1s, popup 1s;
-}
-@keyframes reduce_radius {
-    from { r: 10; }
-    to { r: 3; }
-}
+
 
 h2 {
     font-size: 1.5em;
@@ -242,7 +243,7 @@ h2 {
     fill: none;
   stroke: gold;
   stroke-width: 32;
-  animation: rotate 1.5s ease-in;
+  
 }
 
 .segment-1 {
@@ -281,7 +282,7 @@ h2 {
 }
 
 .serif {
-    background-color: #c1e1c1; /* Match the 85% segment */
+    background-color: #ddffaa; /* Match the 85% segment */
 }
 
 .sans-serif {
@@ -305,6 +306,9 @@ h2 {
             /* Автоматическое размещение в ряд */
             grid-auto-flow: row;
             margin: auto;
+            animation-name: Appearance;
+            animation-duration: 1s;
+            animation-timing-function: cubic-bezier(.1,-.6,.2,0);
         }
         .content{
             display: grid;
@@ -314,6 +318,9 @@ h2 {
             /* Автоматическое размещение в ряд */
             grid-auto-flow: row;
             margin: 2vw;
+            animation-name: Appearance;
+            animation-duration: 1s;
+            animation-timing-function: cubic-bezier(.1,-.6,.2,0);
            
         }
         .chart-style{
@@ -351,8 +358,11 @@ h2 {
         .section h2 {
             font-family: 'Roboto Condensed', sans-serif;
             text-transform: uppercase;
-            font-size: 1.5em;
+            font-size: 2em;
             margin-bottom: 10px;
+        }
+        .section h3{
+          font-size: 1.5em;
         }
 
         .nav-iconography-svg{
@@ -436,7 +446,7 @@ h2 {
         .pie circle {
             fill: none;
             stroke-width: 40;
-            animation: rotate 1.5s ease-in;
+            
         }
         .pie-color circle{
             fill: none;
@@ -784,6 +794,9 @@ h2 {
 
   place-items: center;
   margin: 100px 0;
+  animation-name: Appearance;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(.1,-.6,.2,0);
 }
 .center-circles-container {
   display: flex;
@@ -1310,12 +1323,320 @@ h2 {
 .apple-svg{
   max-width: 20vw;
 }
-.key-svg-grid{
+.circle-svg-key{
   display: flex;
   flex-wrap: wrap;
   gap: 2vw
 }
+
+
+
+
+@keyframes ch-color {
+  from {
+    stroke: #AE9;
+  }
+  50% {
+    stroke: rgb(104, 148, 94);
+  }
+  to {
+    stroke: rgb(57, 78, 51);
+  }
+}
+@keyframes ch-color-back {
+  from {
+    stroke: rgb(57, 78, 51);
+  }
+  50% {
+    stroke: rgb(104, 148, 94);
+  }
+  to {
+    stroke: #AE9;
+  }
+}
+@keyframes Appearance {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+.sections-svg{
+  animation: rotate-gear 10000ms linear infinite;
+}
+.key-svg:hover{
+  animation: rotate-gear 10000ms linear infinite;
+}
+
+
+
+
+
+
+
  
+/* Существующие анимации, которые остаются без изменений */
+.nav-iconography-svg svg {
+    animation: bounce 1.5s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+
+
+@keyframes fillCircle {
+    0% { stroke-dashoffset: 377; }
+    50% { stroke-dashoffset: 0; }
+    100% { stroke-dashoffset: 377; }
+}
+
+.apple-svg {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.circle {
+    animation: circlePulse 2.5s ease-in-out infinite;
+}
+
+.line {
+    animation: extendLine 2s ease-in-out infinite;
+}
+
+.dot {
+    animation: dotBounce 1.5s ease-in-out infinite;
+}
+
+@keyframes circlePulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+@keyframes extendLine {
+    0% { transform: scaleY(1); }
+    50% { transform: scaleY(1.1); }
+    100% { transform: scaleY(1); }
+}
+
+@keyframes dotBounce {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.countries .bar rect:first-child:hover {
+    animation: extendBar 2s ease-in-out infinite;
+}
+
+@keyframes extendBar {
+    0% { width: 50%; }
+    50% { width: 100%; }
+    100% { width: 50%; }
+}
+
+
+
+@keyframes spinOffset {
+    0% { transform: rotate(0deg) translateX(0); }
+    50% { transform: rotate(180deg) translateX(5px); }
+    100% { transform: rotate(360deg) translateX(0); }
+}
+
+
+
+@keyframes wave {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-5px); }
+    75% { transform: translateY(5px); }
+    100% { transform: translateY(0); }
+}
+
+
+@keyframes spinFade {
+    0% { transform: rotate(0deg); opacity: 1; }
+    50% { transform: rotate(180deg); opacity: 0.7; }
+    100% { transform: rotate(360deg); opacity: 1; }
+}
+
+
+
+@keyframes revealSegment {
+    0% { stroke-dashoffset: 100; opacity: 0.5; }
+    50% { stroke-dashoffset: 0; opacity: 1; }
+    100% { stroke-dashoffset: 100; opacity: 0.5; }
+}
+
+.sections-svg {
+    animation: rotateText 10s linear infinite;
+}
+
+@keyframes rotateText {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Новые анимации для Pie Chart, Pictorial Chart, Line Chart и Bar Chart */
+
+/* Pie Chart - вращение сегментов */
+
+
+@keyframes pieRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Pictorial Chart - пульсация пути */
+.chart .svg-container:nth-child(2) path:first-child {
+    animation: pictorialPulse 2s ease-in-out infinite;
+}
+
+@keyframes pictorialPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Line Chart - волновое движение линий */
+.chart .svg-container:nth-child(3) path {
+    animation: lineWave 2.5s ease-in-out infinite;
+}
+
+@keyframes lineWave {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+/* Bar Chart - рост баров */
+.chart .svg-container:nth-child(4) rect {
+    animation: barGrow 2s ease-in-out infinite;
+}
+
+@keyframes barGrow {
+    0% { height: 100%; }
+    50% { height: 110%; transform: translateY(-10%); }
+    100% { height: 100%; }
+}
+
+/* Эффект удлинения при наведении */
+.chart .svg-container:hover circle,
+.chart .svg-container:hover path,
+.chart .svg-container:hover rect,
+.chart .svg-container:hover text {
+    animation-play-state: paused; /* Приостанавливаем базовую анимацию */
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1.2); /* Удлинение на 20% */
+}
+
+/* Возвращение к исходному размеру при убирании курсора */
+.chart .svg-container circle,
+.chart .svg-container path,
+.chart .svg-container rect,
+.chart .svg-container text {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* При убирании курсора возобновляем базовую анимацию */
+.chart .svg-container:not(:hover) circle,
+.chart .svg-container:not(:hover) path,
+.chart .svg-container:not(:hover) rect,
+.chart .svg-container:not(:hover) text {
+    animation-play-state: running;
+}
+
+
+
+
+
+
+/* Новая анимация для Base Color */
+.pie-color circle {
+    transition: transform 0.3s ease-in-out; /* Плавное увеличение сегмента */
+}
+
+.pie-color circle:hover {
+    transform: scale(1.2); /* Увеличение сегмента при наведении */
+}
+
+/* Скрываем все текстовые элементы по умолчанию */
+.pie-color text {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Показываем номер цвета при наведении на соответствующий сегмент */
+.pie-color circle:nth-child(1):hover ~ text:nth-child(11), /* --base-color1 */
+.pie-color circle:nth-child(2):hover ~ text:nth-child(12), /* --base-color2 */
+.pie-color circle:nth-child(3):hover ~ text:nth-child(13), /* --base-color3 */
+.pie-color circle:nth-child(4):hover ~ text:nth-child(14), /* --base-color4 */
+.pie-color circle:nth-child(5):hover ~ text:nth-child(15), /* --base-color5 */
+.pie-color circle:nth-child(6):hover ~ text:nth-child(16), /* --base-color6 */
+.pie-color circle:nth-child(7):hover ~ text:nth-child(17), /* --base-color7 */
+.pie-color circle:nth-child(8):hover ~ text:nth-child(18), /* --base-color8 */
+.pie-color circle:nth-child(9):hover ~ text:nth-child(19) /* --base-color9 */ {
+    opacity: 1;
+}
+
+/* Центрируем текст с номером цвета */
+.pie-color .color-number {
+    font-size: 16px;
+    fill: #000;
+    text-anchor: middle;
+    dominant-baseline: middle;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+
+
+
+
+/* Обновленные медиа-запросы */
+@media (max-width: 992px) {
+    .countries .bar rect:first-child,
+    .chart .svg-container circle,
+    .chart .svg-container path,
+    .chart .svg-container rect,
+    .chart .svg-container text {
+        animation-duration: 1.5s;
+    }
+    
+    .chart .svg-container:hover circle,
+    .chart .svg-container:hover path,
+    .chart .svg-container:hover rect,
+    .chart .svg-container:hover text {
+        transform: scale(1.1); /* Меньшее увеличение для средних экранов */
+    }
+}
+
+@media (max-width: 600px) {
+    .svg-container {
+        transform: scale(0.6);
+    }
+    
+    .countries .bar rect:first-child,
+    .chart .svg-container circle,
+    .chart .svg-container path,
+    .chart .svg-container rect,
+    .chart .svg-container text {
+        animation-duration: 1s;
+    }
+    
+    .chart .svg-container:hover circle,
+    .chart .svg-container:hover path,
+    .chart .svg-container:hover rect,
+    .chart .svg-container:hover text {
+        transform: scale(1.05); /* Еще меньшее увеличение для маленьких экранов */
+    }
+}
     </style>
 </head>
 <body>
@@ -1351,7 +1672,7 @@ h2 {
                     <div>
                         <div class="svg-container">
                             <svg viewBox="0 0 100 100" class="pie">
-                                <circle r="10%" cx="50" cy="65"  stroke="var(--pale-green)" stroke-dasharray="75 100" />
+                                <circle r="10%" cx="50" cy="65"  stroke="var(--pale-green)" stroke-dasharray="75 100" />         
                                 <circle r="20" cx="50" cy="65"  stroke="var(--dark-green)" stroke-dasharray="20 100" stroke-dashoffset="-75" />
                                 <circle r="20" cx="50" cy="65"  stroke="green" stroke-dasharray="5 100" stroke-dashoffset="-95" />
                                 <path d="M30 18 H65 V5 H30 L35 12 " fill="#fff"></path>
@@ -1440,10 +1761,10 @@ h2 {
                 <h3>Key Info</h3>
                 <p>Percentage of infographics with key:</p>
                 <div class="svg-container key-info-svg">
-                    <svg viewBox="0 0 64 64">
-                        <circle r="25%" cx="50%" cy="50%" style="stroke-dasharray: 67 100; stroke: #AE9; fill:none;" stroke-width="32">
+                    <svg viewBox="0 0 64 64" class="key-svg">
+                        <circle r="25%" cx="50%" cy="50%" style="stroke-dasharray: 67 100; stroke: #AE9; fill:none;" stroke-width="32" >
                         </circle>
-                        <circle r="25%" cx="50%" cy="50%" style="stroke-dasharray: 33 100; stroke: rgb(47, 66, 42); stroke-dashoffset: -67; fill:none;"  >
+                        <circle r="25%" cx="50%" cy="50%" style="stroke-dasharray: 33 100; stroke: rgb(47, 66, 42); stroke-dashoffset: -67; fill:none;" class="circle-svg-key"  >
                         </circle>
                         <text x="24" y="46" text-anchor="middle" font-size="10">67%</text>
                     </svg>
@@ -1595,8 +1916,8 @@ h2 {
         <div class="section countries">
             <h3>Countries Featured</h3>
             <div class="bar">
-                <svg width="700" height="80">
-                    <rect x="0" y="25" width="600" height="30" fill="#FFCA28" />
+                <svg width="700" height="80" >
+                    <rect x="0" y="25" width="600" height="30" fill="#FFCA28"/>
                     <rect x="605" y="38" width="100" height="3" fill="#000"/>
                     <text x="90" y="41" text-anchor="middle" dominant-baseline="middle" font-size="20px">United states</text>
                 </svg>
@@ -1672,7 +1993,7 @@ h2 {
             <h3>Sections</h3>
             <p></p>
             <div class="svg-container">
-                <svg viewBox="0 0 500 500">
+                <svg viewBox="0 0 500 500" class="sections-svg">
                     <!-- Круг -->
                     <circle cx="250" cy="250" r="150" fill="#e9e9e9" />
                 
@@ -1824,7 +2145,16 @@ h2 {
     </div>
     
     <script>
-        // Здесь можно добавить интерактивность, например, анимации для SVG
+        document.addEventListener('DOMContentLoaded', () => {
+        const circles = document.querySelectorAll('.circle-diagram .fill-ring');
+        circles.forEach(circle => {
+            const percent = circle.getAttribute('data-percent');
+            const circumference = 2 * Math.PI * 60; // r=60
+            const offset = circumference - (percent / 100) * circumference;
+            circle.style.strokeDasharray = `${circumference} ${circumference}`;
+            circle.style.strokeDashoffset = offset;
+        });
+    });
     </script>
 </body>
 </html>
