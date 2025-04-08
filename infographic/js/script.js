@@ -1,23 +1,36 @@
-function selectEdge(){
-    const cube = document.querySelector('.cube');
-    const degs = { 
-        back:   {X: -180, Y:   0},
-        top:    {X:   90, Y:   0},
-        front:  {X:    0, Y:   0},
-        bottom: {X:  -90, Y:   0},
-        left:   {X:    0, Y: -90},
-        right:  {X:    0, Y:  90},
-    }
-
-    document.querySelectorAll('nav a').forEach(elem => {
-        elem.addEventListener('click', (e) => {
-            e.preventDefault();
-            let edgeName = e.target.hash.replace(/#/, '');
-            cube.style.transform = 'perspective(700px) rotateX('+degs[edgeName].X+'deg) rotateY('+degs[edgeName].Y+'deg)';
-        })
+document.addEventListener('DOMContentLoaded', () => {
+    const circles = document.querySelectorAll('.circle-diagram .fill-ring');
+    circles.forEach(circle => {
+        const percent = circle.getAttribute('data-percent');
+        const circumference = 2 * Math.PI * 60; // r=60
+        const offset = circumference - (percent / 100) * circumference;
+        circle.style.strokeDasharray = `${circumference} ${circumference}`;
+        circle.style.strokeDashoffset = offset;
     });
-}
+});
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
-    selectEdge();
+const observerOptions = {
+    root: null, // Отслеживаем относительно viewport
+    rootMargin: '0px', // Отступ от края viewport
+    threshold: 0.1 // Срабатывает, когда 10% элемента видно
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            // Опционально: прекращаем наблюдение после появления
+            observer.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+// Выбираем все элементы с классом fade-in
+const elements = document.querySelectorAll('.fade-in');
+elements.forEach(element => {
+    observer.observe(element);
+});
 });

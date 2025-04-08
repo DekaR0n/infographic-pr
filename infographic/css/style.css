@@ -1,73 +1,1696 @@
-body{
-    background-color: black;
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital@1&family=Oswald:wght@500&display=swap');
+@import url('https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css');
+:root {
+--gap: -200px;
+--circle-size: 200px;
+--circle-size-small: 130px;
+--color-1: #828f95;
+--color-2: #9da6a5;
+--color-3: #77ada7;
+--color-4: #5aafb2;
+--color-5: #39b3bb;
+--color-6: #07bec2;
+
+--background: #e9e5c7;
+--mustard: #f9d22b;
+--pale-green: #cce074;
+--dark-green: #8bb53f;
+
+--chart-col1: #ab832e;
+--chart-col2: #c69a2e;
+--chart-col3: #e1bb26;
+--chart-col4: #f9d22b;
+
+--chart-col5: #abdfed;
+--chart-col6: #98d6e9;
+--chart-col7: #77c5ec;
+--chart-col8: #50aadc;
+
+--base-color1: #f5f0d8;
+--base-color2: #cdcbca;
+--base-color3: #79c5ea;
+--base-color4: #1d2326;
+--base-color5: #aed14c;
+--base-color6: #f9cf2e;
+--base-color7: #fa9f1d;
+--base-color8: #d73b2a;
+--base-color9: #aa6fac;
+}
+body {
     margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--background);
+    
 }
-.wrapper{
-    margin: auto;
-}
-.hero-section{
+
+.container {
+    padding: 20px;
     display: grid;
-    grid-template-columns: 1.4fr 1fr;
-    max-height: 100vh;
-    height: 100vh;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    justify-self: center;
+    align-self: center;
 }
-.hero-left{
-    margin: auto 0;
-    align-items: center;
-    justify-content: center;
+
+
+
+.header {
     text-align: center;
+    padding: 40px 20px;
 }
-.hero-right{
-    align-self: flex-end;
+
+.header-title {
+    position: relative;
+    display: inline-block;
+    animation-name: Appearance;
+    animation-duration: 0.4s;
+    animation-timing-function: cubic-bezier(.1,-.6,.2,0);
 }
-h1, h2{
-    font-size: 5rem;
-    color: aliceblue;
-    letter-spacing: -0.2rem;
+
+.header-title svg {
+    display: block;
 }
-p{
-    color: aliceblue;
+
+.header-title text {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 50px; /* Размер текста */
+    font-weight: 700;
+    text-transform: uppercase;
+    fill: #000000; /* Чёрный текст */
 }
-span{
-    color: aliceblue;
+
+.header-subtitle {
+    font-size: 2em; /* Размер подзаголовка */
+    color: #757575; /* Серый цвет текста */
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.5;
+
+    animation-name: Appearance;
+    animation-duration: 0.8s;
+    animation-timing-function: cubic-bezier(.1,-.6,.2,0);
+}
+
+@media (max-width: 768px) {
+    .header-title text {
+        font-size: 30px;
+    }
+
+    .header-subtitle {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-title text {
+        font-size: 20px;
+    }
+
+    .header-subtitle {
+        font-size: 0.8em;
+    }
 }
 
 
-.cube {
-    position: absolute;
-    width: 20rem;
-    height: 20rem;
 
-    top:  calc(50% - 300px / 2);
-    left: calc(30% - 300px / 2);
-    transform-style: preserve-3d;
-    transform: perspective(700px)  rotateX(-36deg) rotateY(-27deg);
-    transition: all 1s ease;
-    animation: rotation 30s ease-in-out infinite;
+
+.step1 {
+z-index: 999;
+}
+
+.step2 .animated {
+-webkit-animation-delay: 1s; 
+animation-delay: 1s;
+position: relative;
+top: -6px;
+}
+
+.step3 .animated {
+-webkit-animation-delay: 2s; 
+animation-delay: 2s;
+z-index: -3;
+position:relative;
+top: -12px;
+}
+
+.step4 .animated {
+-webkit-animation-delay: 3s; 
+animation-delay: 3s;
+z-index: -5;
+position: relative;
+top: -18px;
+}
+
+.shape {
+width: 150px;
+height: 120px;
+-webkit-box-shadow: 0px 12px 30px -6px rgba(41,41,41,0.25);
+-moz-box-shadow: 0px 12px 30px -6px rgba(41,41,41,0.25);
+box-shadow: 0px 12px 30px -6px rgba(41,41,41,0.25);
+top: 10px;
+left: 8px;
+text-align: center;
+}
+
+.shape-1 .shape{
+background: #e74c3c;
+}
+
+.shape-1 .material-icons {
+color: #e74c3c;
+}
+
+.shape-2 .shape{
+background: #34495e;
+}
+
+.shape-2 .material-icons { 
+color: #34495e;
+}
+
+.shape-3 .shape {
+background: #f39c12;
+}
+
+.shape-3 .material-icons { 
+color: #f39c12;
+}
+
+.shape-4 .shape {
+background: #3498db;
+}
+
+.shape-4 .material-icons { 
+color: #3498db;
+}
+
+
+h1 {
+color: #fff;
+font-weight: 700;
+letter-spacing: 2px;
+padding-top: 8px;
+transform:scale(2,3); 
+-webkit-transform:scale(2,3); 
+-moz-transform:scale(2,3); 
+-ms-transform:scale(2,3); 
+-o-transform:scale(2,3); 
+}
+
+.box p {
+font-weight: 300;
+padding-top: 25px;
+}
+
+
+
+
+.font{
+    justify-items: center;
+}
+.chart-block {
+text-align: center;
+padding: 20px;
+border-radius: 5px;
+}
+
+
+h2 {
+font-size: 1.5em;
+margin-bottom: 10px;
+}
+
+.chart-container {
+position: relative;
+margin: 1vh;
+justify-items: center;
+align-items: center;
+}
+
+.pie-chart {
+width: 25vh;
+height: 100%;
+}
+.pie-chart circle{
+fill: none;
+stroke: gold;
+stroke-width: 32;
+
+}
+
+.segment-1 {
+fill: #c1e1c1; /* Light green for 85% */
+}
+
+.segment-2 {
+fill: #a9d6a9; /* Slightly darker green for 15% */
+}
+
+.chart-text {
+font-size: 2em;
+font-weight: bold;
+fill: #000;
+}
+
+.legend {
+margin-top: 20px;
+display: flex;
+flex-direction: row;
+gap: 1.4vh;
+}
+
+.legend-item {
+display: flex;
+align-items: center;
+margin: 5px 0;
+font-size: 0.9em;
+}
+
+.color-box {
+width: 15px;
+height: 15px;
+margin-right: 10px;
+display: inline-block;
+}
+
+.serif {
+background-color: #ddffaa; /* Match the 85% segment */
+}
+
+.sans-serif {
+background-color: #a9d6a9; /* Match the 15% segment */
+}
+
+.condensed {
+background-color: #a9d6a9; /* Match the 15% segment with pattern */
+background-image: linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000),
+             linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000);
+background-size: 10px 10px;
+background-position: 0 0, 5px 5px;
+}
+
+
+.design{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    /* Два ряда */
+    grid-template-rows: auto auto;
+    /* Автоматическое размещение в ряд */
+    grid-auto-flow: row;
+    margin: auto;
+    animation-name: Appearance;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(.1,-.6,.2,0);
+}
+.content{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    /* Два ряда */
+    grid-template-rows: auto auto;
+    /* Автоматическое размещение в ряд */
+    grid-auto-flow: row;
+    margin: 2vw;
+    animation-name: Appearance;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(.1,-.6,.2,0);
+   
+}
+.chart-style{
+    grid-column:span 2 ;
+}
+.chart-style p{
+  margin: 2vh 0;
+}
+.countries{
+    grid-column: span 2;
+    grid-row:span 2;
+}
+.statistic{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.header h1 {
+    background-color: #FFC107;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 2.5em;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+}
+
+.header p {
+    font-size: 1em;
+    color: #757575;
+}
+
+.section {
+    padding: 20px;
+}
+
+.section h2 {
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+.section h3{
+  font-size: 1.5em;
+}
+
+.nav-iconography-svg{
+  height: auto;
+  width: 20vh;
+  align-content: end;
+  justify-content: center;
+}
+.chart-style, .font, .countries, .theme, .key-info, .base-color, .nav-iconography, .sections, .credited-sources, .title {
+    border: 1px dashed #B0BEC5;
+    border-radius: 5px;
+}
+
+.sections{
+  justify-items: center;
+}
+.sections p{
+  margin: 1vh;
+}
+
+.key-info{
+  justify-items: center;
+}
+.key-info p{
+  margin: 2vh 0;
+}
+
+
+/* SVG Styles */
+.svg-container {
+    width: 20vh;
+    height: 20vh;
+    align-content: end;
+    justify-content: center;
+}
+
+/* Chart Style Section */
+.chart-style .chart {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    max-width: 1170px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+}
+
+/* Font Section */
+.font .pie-chart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Countries Section */
+.countries .bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.countries p{
+  font-size: 2.5vh;
+}
+
+
+/* Theme Section */
+.theme {
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
+
+.theme .word-cloud span {
+    display: inline-block;
+    margin: 5px;
+}
+.word-cloud{
+    display: grid;
+}
+.pie circle {
+    fill: none;
+    stroke-width: 40;
+    
+}
+.pie-color circle{
+    fill: none;
+    stroke: gold;
+    stroke-width: 32;
+    animation: rotate 1.5s ease-in;
+    width: 20vh;
+}
+.pie-color-chart{
+    width: 40vh;
+    height: 40vh;
+    justify-self: center;
+    justify-content: center;
     
     
 }
-
-.cube > article {
-    height: 100%;
-    width: 100%;
-    
-    box-sizing: border-box;
-    position: absolute;
-    transform-style: preserve-3d;
-    
-    line-height: 150%;
-    letter-spacing: 0.05em;
-    
+.key-info-svg{
+    justify-content: center;
 }
 
-.back   {transform: rotateX(-180deg) translateZ(150px); backdrop-filter: blur(15px); opacity: 0.8; }
-.top    {transform: rotateX( 90deg)  translateZ(150px); backdrop-filter: blur(15px); opacity: 0.6;}
-.front  {transform:                  translateZ(150px); backdrop-filter: blur(15px); opacity: 0.5;}
-.bottom {transform: rotateX(-90deg)  translateZ(150px); backdrop-filter: blur(15px); opacity: 0.4;}
-.left   {transform: rotateY(-90deg)  translateZ(150px); backdrop-filter: blur(15px); opacity: 0.7;}
-.right  {transform: rotateY( 90deg)  translateZ(150px); backdrop-filter: blur(15px); opacity: 0.5;}
 
-@keyframes rotation {
-    50% {transform:perspective(700px) rotateX(360deg) rotateY(720deg);}
+
+
+
+
+
+
+
+
+
+.step-list {
+margin: 0;
+padding: 0;
+list-style-type: none;
+}
+.step-list__item {
+counter-increment: step-counter;
+position: relative;
+}
+.step-list__item:before {
+content: counter(step-counter);
+font-weight: 300;
+color: #d8d8d8;
+}
+.step-list__item h2 {
+font-size: 24px;
+line-height: 30px;
+font-weight: 300;
+}
+.step-list__item .icon {
+border-radius: 50%;
+display: block;
+flex: 0 0 auto;
+}
+.step-list__item .icon img {
+width: 100%;
+height: 100%;
+}
+.step-list__item .body {
+font-size: 12px;
+line-height: 18px;
+font-weight: 300;
+}
+.step-list__item .content {
+display: flex;
+flex-direction: row;
+padding-bottom: 18px;
+}
+.step-list__item:first-child .icon {
+background: #f4f6d5;
+}
+.step-list__item:nth-child(2) .icon {
+background: #e8f4f3;
+}
+.step-list__item:nth-child(3) .icon {
+background: #ededed;
+}
+.step-list__item:nth-child(4) .icon {
+background: #edf6ef;
+}
+.step-list__item:nth-child(5) .icon {
+background: #fef3f3;
+}
+.step-list__item:nth-child(odd) .content {
+justify-content: flex-start;
+}
+.step-list__item:nth-child(even) .content {
+justify-content: flex-end;
+}
+.step-list__item:first-child > .step-list__item__inner:before {
+content: none;
+}
+.step-list__item:last-child > .step-list__item__inner:after {
+content: none;
+}
+.step-list__item + li {
+margin-top: 84px;
+}
+.step-list__item + li > div {
+margin-top: -1px;
+}
+@media screen and (max-width: 600px) {
+.step-list__item {
+ display: flex;
+}
+.step-list__item:before {
+ content: counter(step-counter);
+ position: relative;
+ font-size: 36px;
+ line-height: 42px;
+ font-weight: 300;
+ color: #000;
+ margin-right: 12px;
+}
+.step-list__item .icon {
+ order: 0;
+ width: 36px;
+ height: 36px;
+ padding: 9px;
+ position: absolute;
+ left: -9px;
+ top: 42px;
+}
+.step-list__item .body {
+ order: 1;
+ margin-top: 8px;
+ margin-left: 12px;
+}
+.step-list__item .content {
+ align-items: flex-start;
+}
+.step-list__item .content:before {
+ content: '';
+ position: absolute;
+ border-left: #d8d8d8;
+ height: 100%;
+ left: 9px;
+ bottom: 0;
+ display: block;
+ width: 1px;
+ background: #d8d8d8;
+ top: 84px;
+}
+.step-list__item:last-child .content:before {
+ content: none;
+}
+}
+@media screen and (min-width: 601px) {
+.step-list__item:before {
+ content: counter(step-counter);
+ position: absolute;
+ font-size: 90px;
+ line-height: 1;
+ font-weight: 300;
+ color: #d8d8d8;
+}
+.step-list__item .icon {
+ width: 174px;
+ height: 174px;
+ padding: 48px;
+}
+.step-list__item .body {
+ flex: 0 1 33.3333%;
+ margin-top: 84px;
+}
+.step-list__item .content {
+ align-items: flex-end;
+}
+.step-list__item > .step-list__item__inner {
+ position: relative;
+}
+.step-list__item > .step-list__item__inner:before, .step-list__item > .step-list__item__inner:after {
+ border-width: 0px;
+ border-style: solid;
+ border-color: #d8d8d8;
+ display: block;
+ content: '';
+ position: absolute;
+ height: 42px;
+ width: calc(33.3333% - 42px);
+}
+.step-list__item:nth-child(odd) > .step-list__item__inner {
+ text-align: right;
+}
+.step-list__item:nth-child(odd) > .step-list__item__inner:before, .step-list__item:nth-child(odd) > .step-list__item__inner:after {
+ border-left-width: 1px;
+ left: calc(33.3333% - 21px);
+}
+.step-list__item:nth-child(odd) > .step-list__item__inner:before {
+ border-top-width: 1px;
+ border-top-left-radius: 42px;
+ margin-top: -42px;
+}
+.step-list__item:nth-child(odd) > .step-list__item__inner:after {
+ border-bottom-width: 1px;
+ border-bottom-left-radius: 42px;
+ margin-bottom: -42px;
+}
+.step-list__item:nth-child(odd):before {
+ left: 0;
+ margin-left: 33.3333%;
+ transform: translateX(-100%);
+}
+.step-list__item:nth-child(odd) .icon {
+ margin-left: 72px;
+}
+.step-list__item:nth-child(even) > .step-list__item__inner:before, .step-list__item:nth-child(even) > .step-list__item__inner:after {
+ border-right-width: 1px;
+ right: calc(33.3333% - 21px);
+}
+.step-list__item:nth-child(even) > .step-list__item__inner:before {
+ border-top-width: 1px;
+ border-top-right-radius: 42px;
+ margin-top: -42px;
+}
+.step-list__item:nth-child(even) > .step-list__item__inner:after {
+ border-bottom-width: 1px;
+ border-bottom-right-radius: 42px;
+ margin-bottom: -42px;
+}
+.step-list__item:nth-child(even):before {
+ right: 0;
+ margin-right: 33.3333%;
+ transform: translateX(100%);
+}
+.step-list__item:nth-child(even) .icon {
+ margin-right: 72px;
+}
+.step-list__item:nth-child(even) .body {
+ order: 1;
+}
+}
+@media screen and (max-width: 1670px) {
+.chart{
+flex-wrap: wrap;
+}
+.container{
+margin: 0 auto;
+}
+.design{
+grid-template-columns: auto auto;
+flex-wrap: wrap;
+justify-self: left;
+width: 93vw;
+margin: 0;
+}
+.chart-style{
+grid-column: span 1;
+}
+.svg-header{
+width: 80vw;
+}
+
+.content{
+grid-template-columns: auto;
+}
+.countries{
+grid-column: span 1;
+width: 88vw;
+}
+.theme{
+width: 88vw;
+}
+.sections{
+width: 88vw;
+}
+.credited-sources{
+width: 88vw;
+}
+.title{
+width: 88vw;
+display:none;
+}
+
+.credited-sources{
+align-items: center;
+
+}
+
+}
+@media screen and (max-width: 860px){
+.design{
+grid-template-columns: auto;
+}
+}
+@media screen and (max-width: 770px){
+.title{
+display: none;
+}
+}
+@media screen and (max-width: 1492px){
+.graphic-container{
+display: none;
+}
+}
+@media screen and (max-width: 600px){
+.design{
+width: 80vw;
+}
+.chart-style{
+max-width: 80vw;
+}
+.font{
+max-width: 80vw;
+}
+.key-info{
+max-width: 80vw;
+}
+.base-color{
+max-width: 80vw;
+}
+.pie-color-chart{
+width: 20vh;
+height: 20vh;
+}
+}
+@media screen and (max-width: 805px){
+.svg-title{
+width: 90vh;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* {
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+.graphic-container {
+width: 100%;
+min-height: 100vh;
+
+place-items: center;
+margin: 100px 0;
+animation-name: Appearance;
+animation-duration: 1s;
+animation-timing-function: cubic-bezier(.1,-.6,.2,0);
+}
+.center-circles-container {
+display: flex;
+justify-content: center;
+align-items: center;
+grid-gap: 20vh;
+height: 100%;
+width: 100%;
+}
+
+.single {
+gap: 30vh;
+}
+.double {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 20px;
+}
+.double:nth-child(even) {
+flex-direction: column-reverse;
+}
+.circle {
+width: var(--circle-size);
+height: var(--circle-size);
+background: #fff;
+border-radius: 50%;
+
+display: grid;
+place-items: center;
+position: relative;
+}
+
+.icon i {
+font-size: 3rem;
+}
+.content-container {
+position: absolute;
+max-width: 200px;
+min-width: 200px;
+width: 100%;
+}
+
+.content-container h2 {
+position: relative;
+padding: 0 10px;
+}
+/* arrow heading border */
+.one .content-container h2::before, 
+.one .content-container h2::after,
+.two .content-container h2::before, 
+.two .content-container h2::after, 
+.five .content-container h2::before, 
+.five .content-container h2::after {
+position: absolute;
+content: '';
+width: 2px;
+height: 22px;
+background: teal;
+left: -6px;
+}
+.one .content-container h2::before, 
+.two .content-container h2::before, 
+.five .content-container h2::before {
+top: -2px;
+transform: rotate(30deg);
+}
+.one .content-container h2::after,
+.two .content-container h2::after, 
+.five .content-container h2::after {
+bottom: -2px;
+transform: rotate(-30deg);
+}
+.three .content-container h2::before, 
+.three .content-container h2::after,
+.four .content-container h2::before, 
+.four .content-container h2::after, 
+.six .content-container h2::before, 
+.six .content-container h2::after {
+position: absolute;
+content: '';
+width: 2px;
+height: 22px;
+background: teal;
+right: -6px;
+}
+.three .content-container h2::before, 
+.four .content-container h2::before, 
+.six .content-container h2::before {
+top: -2px;
+transform: rotate(-30deg);
+}
+.three .content-container h2::after,
+.four .content-container h2::after, 
+.six .content-container h2::after {
+bottom: -2px;
+transform: rotate(30deg);
+}
+
+/* different content elements */
+.two, .four {
+width: var(--circle-size-small);
+height: var(--circle-size-small);
+}
+.two i, .four i {
+color: #fff;
+font-size: 2.5rem;
+}
+.one .content-container {
+left: 0;
+bottom: var(--gap);
+text-align: left;
+}
+.two .content-container {
+left: 80px;
+bottom: var(--gap);
+text-align: left;
+}
+.three .content-container {
+right: 200px;
+top: var(--gap);
+text-align: right;
+}
+.four .content-container {
+right: 20px;
+top: var(--gap);
+text-align: right;
+}
+.five .content-container {
+left: 200px;
+bottom: var(--gap);
+text-align: left;
+}
+.six .content-container {
+left: 0;
+top: var(--gap);
+text-align: right;
+}
+
+/* lines */
+/* bottom layer */
+.one .line {
+position: absolute;
+width: 2px;
+height: 170px;
+background-color: var(--color-1);
+top: -150px;
+left: -30px;
+}
+.one .line::before {
+content: '';
+position: absolute;
+left: 0;
+top: 0;
+width: 35px;
+height: 2px;
+background: var(--color-1);
+}
+.one .line::after, 
+.two .line::after,
+.five .line::after {
+content: '';
+position: absolute;
+left: 0;
+bottom: 0;
+width: 20px;
+height: 2px;
+}
+.one .line::after {
+background: var(--color-1);  
+}
+.two .line::after {
+background: var(--color-2);
+}
+.five .line::after {
+background: var(--color-5);
+}
+.two .line {
+position: absolute;
+width: 2px;
+height: 90px;
+background-color: var(--color-2);
+top: -70px;
+left: -30px;
+}
+.five .line {
+position: absolute;
+width: 2px;
+height: 110px;
+background-color: var(--color-5);
+top: -90px;
+left: -30px;
+}
+/* top layer */
+.three .line {
+position: absolute;
+width: 2px;
+height: 222px;
+background-color: var(--color-3);
+bottom: -100px;
+right: -30px;
+}
+.three .line::after, 
+.four .line::after, 
+.six .line::after {
+content: '';
+position: absolute;
+right: 0;
+top: 0;
+width: 20px;
+height: 2px;
+}
+.three .line::after {
+background: var(--color-3);  
+}
+.four .line::after {
+background: var(--color-4);  
+}
+.six .line::after {
+background: var(--color-6);  
+}
+.four .line {
+position: absolute;
+width: 2px;
+height: 222px;
+background-color: var(--color-4);
+bottom: -100px;
+right: -30px;
+}
+.four .line::before {
+content: '';
+position: absolute;
+right: 0px;
+bottom: 0;
+width: 20px;
+height: 2px;
+background: var(--color-4);
+}
+.six .line {
+position: absolute;
+width: 2px;
+height: 282px;
+background-color: var(--color-6);
+bottom: -160px;
+right: -30px;
+}
+.six .line::before {
+content: '';
+position: absolute;
+right: 0px;
+bottom: 0;
+width: 35px;
+height: 2px;
+background: var(--color-6);
+}
+
+/* dots */
+.one .dot {
+position: absolute;
+top: 110px;
+right: -30px;
+width: 20px;
+height: 20px;
+background: var(--color-1);
+border-radius: 50%;
+box-shadow: -20px -110px 0 6px var(--color-1), -30px 80px 0 4px var(--color-1);
+}
+.four .dot {
+position: absolute;
+top: 130px;
+left: 0px;
+width: 20px;
+height: 20px;
+background: var(--color-4);
+border-radius: 50%;
+box-shadow: -22px -138px 0 10px var(--color-4), -70px 70px 0 0px var(--color-4);
+}
+.six .dot {
+position: absolute;
+top: -30px;
+left: 10px;
+width: 10px;
+height: 10px;
+background: var(--color-6);
+border-radius: 50%;
+box-shadow: -50px 50px 0 25px var(--color-6), 150px 250px 0 10px var(--color-6);
+}
+/* circle colors */
+.one {
+box-shadow: inset 0 0 0 20px var(--color-1), inset 0px 0px 12px 20px #989898;
+}
+.two {
+background-color: var(--color-2);
+transform: translateX(-20px);
+}
+.three {
+box-shadow: inset 0 0 0 20px var(--color-3), inset 0px 0px 12px 20px #989898;
+transform: translateX(10px);
+}
+.four {
+background-color: var(--color-4);
+transform: translateX(-20px);
+}
+.five {
+box-shadow: inset 0 0 0 20px var(--color-5), inset 0px 0px 12px 20px #989898;
+transform: translateX(10px);
+}
+.six {
+box-shadow: inset 0 0 0 20px var(--color-6), inset 0px 0px 12px 20px #989898;
+}
+
+
+/* h2 border colors */
+.one .content-container h2 {
+border-top: 2px solid var(--color-1);
+border-bottom: 2px solid var(--color-1);
+}
+.two .content-container h2 {
+border-top: 2px solid var(--color-2);
+border-bottom: 2px solid var(--color-2);
+}
+.three .content-container h2 {
+border-top: 2px solid var(--color-3);
+border-bottom: 2px solid var(--color-3);
+}
+.four .content-container h2 {
+border-top: 2px solid var(--color-4);
+border-bottom: 2px solid var(--color-4);
+}
+.five .content-container h2 {
+border-top: 2px solid var(--color-5);
+border-bottom: 2px solid var(--color-5);
+}
+.six .content-container h2 {
+border-top: 2px solid var(--color-6);
+border-bottom: 2px solid var(--color-6);
+}
+
+.one .content-container h2::before, 
+.one .content-container h2::after {
+background: var(--color-1);
+
+}
+.two .content-container h2::before, 
+.two .content-container h2::after {
+background: var(--color-2);
+
+} 
+.five .content-container h2::before, 
+.five .content-container h2::after {
+background: var(--color-5);
+}
+
+.three .content-container h2::before,
+.three .content-container h2::after {
+background: var(--color-3);
+
+}
+.four .content-container h2::before, 
+.four .content-container h2::after {
+background: var(--color-4);
+} 
+.six .content-container h2::before, 
+.six .content-container h2::after {
+background: var(--color-6);
+}
+
+/* media */
+@media (max-width: 992px) {
+.graphic-container {
+margin: 50px 0;
+}
+.center-circles-container {
+overflow: hidden;
+overflow-x: scroll;
+width: 1300px;
+}
+.double {
+flex-direction: row;
+}
+.double:nth-child(even) {
+flex-direction: row;
+}
+.two {
+transform: translateX(0px);
+}
+.three {
+transform: translateX(0px);
+}
+.four {
+transform: translateX(0px);
+}
+.five {
+transform: translateX(0px);
+}
+}
+
+
+.bottom-charts-wrapper {
+position: relative;
+margin-bottom: 20px;
+}
+
+.bottom-texts {
+display: flex;
+justify-content: center;
+gap: 7.3vh;
+margin-bottom: 20px;
+}
+
+.text-block {
+background-color: var(--mustard);
+color: white;
+padding: 10px;
+border-radius: 5px;
+width: 100px;
+text-align: center;
+position: relative;
+}
+
+.text-block::after {
+content: '';
+position: absolute;
+bottom: -20px;
+left: 50%;
+transform: translateX(-50%);
+width: 2px;
+height: 20px;
+background-color:var(--mustard);
+}
+
+.text-block::before {
+content: '▼';
+position: absolute;
+bottom: -30px;
+left: 50%;
+transform: translateX(-50%);
+color: var(--mustard);
+font-size: 16px;
+}
+
+.bottom-charts {
+display: flex;
+justify-content: center;
+gap: 20px;
+position: relative;
+z-index: 1;
+}
+
+.horizontal-line {
+position: absolute;
+top: 50%;
+left: 0;
+right: 0;
+height: 20px;
+background-color: var(--dark-blue);
+z-index: 0;
+}
+
+.extra-chart {
+display: flex;
+justify-content: center;
+}
+
+.diagram-wrapper {
+position: relative;
+}
+
+.circle-diagram {
+transform: rotate(-90deg);
+}
+
+.circle-diagram .base-ring {
+fill: none;
+stroke: #e0e0e0;
+stroke-width: 20;
+}
+
+.circle-diagram .fill-ring {
+fill: none;
+stroke-width: 20;
+stroke-linecap: round;
+transition: stroke-dashoffset 0.5s ease;
+}
+
+.circle-diagram .value-label {
+transform: rotate(90deg);
+transform-origin: center;
+font-size: 20px;
+fill: #333;
+}
+
+.circle-diagram .icon-label {
+transform: rotate(90deg);
+transform-origin: center;
+font-size: 30px;
+fill: #333;
+}
+
+.circle-diagram.large-diagram .base-ring,
+.circle-diagram.large-diagram .fill-ring {
+stroke-width: 30;
+}
+
+.info-box {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-color: var(--mustard);
+color: white;
+padding: 10px;
+border-radius: 5px;
+opacity: 0;
+transition: opacity 0.3s ease;
+pointer-events: none;
+width: 200px;
+text-align: center;
+}
+
+.diagram-wrapper:hover .info-box {
+opacity: 1;
+}
+.apple-svg{
+max-width: 20vw;
+}
+.circle-svg-key{
+display: flex;
+flex-wrap: wrap;
+gap: 2vw
+}
+
+
+
+
+@keyframes ch-color {
+from {
+stroke: #AE9;
+}
+50% {
+stroke: rgb(104, 148, 94);
+}
+to {
+stroke: rgb(57, 78, 51);
+}
+}
+@keyframes ch-color-back {
+from {
+stroke: rgb(57, 78, 51);
+}
+50% {
+stroke: rgb(104, 148, 94);
+}
+to {
+stroke: #AE9;
+}
+}
+@keyframes Appearance {
+0% {opacity: 0;}
+100% {opacity: 1;}
+}
+.sections-svg{
+animation: rotate-gear 10000ms linear infinite;
+}
+.key-svg:hover{
+animation: rotate-gear 10000ms linear infinite;
+}
+
+
+
+
+
+
+
+
+/* Существующие анимации, которые остаются без изменений */
+.nav-iconography-svg svg {
+animation: bounce 1.5s ease-in-out infinite;
+}
+
+@keyframes bounce {
+0% { transform: translateY(0); }
+50% { transform: translateY(-10px); }
+100% { transform: translateY(0); }
+}
+
+
+
+@keyframes fillCircle {
+0% { stroke-dashoffset: 377; }
+50% { stroke-dashoffset: 0; }
+100% { stroke-dashoffset: 377; }
+}
+
+.apple-svg {
+animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+0% { transform: translateY(0); }
+50% { transform: translateY(-10px); }
+100% { transform: translateY(0); }
+}
+
+.circle {
+animation: circlePulse 2.5s ease-in-out infinite;
+}
+
+.line {
+animation: extendLine 2s ease-in-out infinite;
+}
+
+.dot {
+animation: dotBounce 1.5s ease-in-out infinite;
+}
+
+@keyframes circlePulse {
+0% { transform: scale(1); }
+50% { transform: scale(1.02); }
+100% { transform: scale(1); }
+}
+
+@keyframes extendLine {
+0% { transform: scaleY(1); }
+50% { transform: scaleY(1.1); }
+100% { transform: scaleY(1); }
+}
+
+@keyframes dotBounce {
+0% { transform: scale(1); }
+50% { transform: scale(1.2); }
+100% { transform: scale(1); }
+}
+
+.countries .bar rect:first-child:hover {
+animation: extendBar 2s ease-in-out infinite;
+}
+
+@keyframes extendBar {
+0% { width: 50%; }
+50% { width: 100%; }
+100% { width: 50%; }
+}
+
+
+
+@keyframes spinOffset {
+0% { transform: rotate(0deg) translateX(0); }
+50% { transform: rotate(180deg) translateX(5px); }
+100% { transform: rotate(360deg) translateX(0); }
+}
+
+
+
+@keyframes wave {
+0% { transform: translateY(0); }
+25% { transform: translateY(-5px); }
+75% { transform: translateY(5px); }
+100% { transform: translateY(0); }
+}
+
+
+@keyframes spinFade {
+0% { transform: rotate(0deg); opacity: 1; }
+50% { transform: rotate(180deg); opacity: 0.7; }
+100% { transform: rotate(360deg); opacity: 1; }
+}
+
+
+
+@keyframes revealSegment {
+0% { stroke-dashoffset: 100; opacity: 0.5; }
+50% { stroke-dashoffset: 0; opacity: 1; }
+100% { stroke-dashoffset: 100; opacity: 0.5; }
+}
+
+.sections-svg {
+animation: rotateText 10s linear infinite;
+}
+
+@keyframes rotateText {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+
+/* Новые анимации для Pie Chart, Pictorial Chart, Line Chart и Bar Chart */
+
+/* Pie Chart - вращение сегментов */
+
+
+@keyframes pieRotate {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+
+/* Pictorial Chart - пульсация пути */
+.chart .svg-container:nth-child(2) path:first-child {
+animation: pictorialPulse 2s ease-in-out infinite;
+}
+
+@keyframes pictorialPulse {
+0% { transform: scale(1); }
+50% { transform: scale(1.05); }
+100% { transform: scale(1); }
+}
+
+/* Line Chart - волновое движение линий */
+.chart .svg-container:nth-child(3) path {
+animation: lineWave 2.5s ease-in-out infinite;
+}
+
+@keyframes lineWave {
+0% { transform: translateY(0); }
+50% { transform: translateY(-5px); }
+100% { transform: translateY(0); }
+}
+
+/* Bar Chart - рост баров */
+.chart .svg-container:nth-child(4) rect {
+animation: barGrow 2s ease-in-out infinite;
+}
+
+@keyframes barGrow {
+0% { height: 100%; }
+50% { height: 110%; transform: translateY(-10%); }
+100% { height: 100%; }
+}
+
+/* Эффект удлинения при наведении */
+.chart .svg-container:hover circle,
+.chart .svg-container:hover path,
+.chart .svg-container:hover rect,
+.chart .svg-container:hover text {
+animation-play-state: paused; /* Приостанавливаем базовую анимацию */
+transition: transform 0.3s ease-in-out;
+transform: scale(1.2); /* Удлинение на 20% */
+}
+
+/* Возвращение к исходному размеру при убирании курсора */
+.chart .svg-container circle,
+.chart .svg-container path,
+.chart .svg-container rect,
+.chart .svg-container text {
+transition: transform 0.3s ease-in-out;
+}
+
+/* При убирании курсора возобновляем базовую анимацию */
+.chart .svg-container:not(:hover) circle,
+.chart .svg-container:not(:hover) path,
+.chart .svg-container:not(:hover) rect,
+.chart .svg-container:not(:hover) text {
+animation-play-state: running;
+}
+
+
+
+
+
+
+/* Новая анимация для Base Color */
+.pie-color circle {
+transition: transform 0.3s ease-in-out; /* Плавное увеличение сегмента */
+}
+
+.pie-color circle:hover {
+transform: scale(1.2); /* Увеличение сегмента при наведении */
+}
+
+/* Скрываем все текстовые элементы по умолчанию */
+.pie-color text {
+opacity: 0;
+transition: opacity 0.3s ease-in-out;
+}
+
+/* Показываем номер цвета при наведении на соответствующий сегмент */
+.pie-color circle:nth-child(1):hover ~ text:nth-child(11), /* --base-color1 */
+.pie-color circle:nth-child(2):hover ~ text:nth-child(12), /* --base-color2 */
+.pie-color circle:nth-child(3):hover ~ text:nth-child(13), /* --base-color3 */
+.pie-color circle:nth-child(4):hover ~ text:nth-child(14), /* --base-color4 */
+.pie-color circle:nth-child(5):hover ~ text:nth-child(15), /* --base-color5 */
+.pie-color circle:nth-child(6):hover ~ text:nth-child(16), /* --base-color6 */
+.pie-color circle:nth-child(7):hover ~ text:nth-child(17), /* --base-color7 */
+.pie-color circle:nth-child(8):hover ~ text:nth-child(18), /* --base-color8 */
+.pie-color circle:nth-child(9):hover ~ text:nth-child(19) /* --base-color9 */ {
+opacity: 1;
+}
+
+/* Центрируем текст с номером цвета */
+.pie-color .color-number {
+font-size: 16px;
+fill: #000;
+text-anchor: middle;
+dominant-baseline: middle;
+opacity: 0;
+transition: opacity 0.3s ease-in-out;
+}
+
+
+
+
+
+
+/* Обновленные медиа-запросы */
+@media (max-width: 992px) {
+.countries .bar rect:first-child,
+.chart .svg-container circle,
+.chart .svg-container path,
+.chart .svg-container rect,
+.chart .svg-container text {
+animation-duration: 1.5s;
+}
+
+.chart .svg-container:hover circle,
+.chart .svg-container:hover path,
+.chart .svg-container:hover rect,
+.chart .svg-container:hover text {
+transform: scale(1.1); /* Меньшее увеличение для средних экранов */
+}
+}
+
+@media (max-width: 600px) {
+.svg-container {
+transform: scale(0.6);
+}
+
+.countries .bar rect:first-child,
+.chart .svg-container circle,
+.chart .svg-container path,
+.chart .svg-container rect,
+.chart .svg-container text {
+animation-duration: 1s;
+}
+
+.chart .svg-container:hover circle,
+.chart .svg-container:hover path,
+.chart .svg-container:hover rect,
+.chart .svg-container:hover text {
+transform: scale(1.05); /* Еще меньшее увеличение для маленьких экранов */
+}
+}
+
+
+
+
+
+
+
+
+
+
+.fade-in {
+opacity: 0;
+transform: translateY(50px); /* Начальное смещение вниз */
+transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+}
+
+/* Состояние при появлении */
+.fade-in.visible {
+opacity: 1;
+transform: translateY(0);
+}
+
+/* Опционально: разные анимации для разных секций */
+.header.fade-in {
+transition-delay: 0.2s;
+}
+
+.design.fade-in {
+transition-delay: 0.2s;
+}
+
+.content.fade-in {
+transition-delay: 0.3s;
+}
+
+.graphic-container.fade-in {
+transition-delay: 0.8s;
+}
+
+/* Для отдельных элементов внутри секций */
+.chart.fade-in,
+.font.fade-in,
+.key-info.fade-in,
+.base-color.fade-in,
+.nav-iconography.fade-in,
+.countries.fade-in,
+.sections.fade-in,
+.credited-sources.fade-in {
+transition-delay: 0.2s;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+.fade-in {
+transform: translateY(30px); /* Меньше смещение на мобильных */
+transition-duration: 0.5s;
+}
+}
+
+@media (max-width: 480px) {
+.fade-in {
+transform: translateY(20px);
+transition-duration: 0.4s;
+}
 }
